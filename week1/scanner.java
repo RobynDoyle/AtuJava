@@ -20,6 +20,7 @@ public class scanner {
         System.out.println("Add name: ");
         String firstName = keyboardIn.nextLine();
         System.out.println(firstName + " is your driver");
+        keyboardIn.close();
     }
     
 }

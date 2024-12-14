@@ -13,6 +13,8 @@ public class wage {
         double hours = keyboardIn.nextDouble();
         double salary = wage * hours;
 
+         keyboardIn.close();
+
         
 
         System.out.println("Your total salary is = €" + salary);

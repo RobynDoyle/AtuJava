@@ -12,6 +12,7 @@ public class Pi {
     double R = keyboardIn.nextDouble();
     double Area = Pi * R * R;
     System.out.println("Area is equal to " + Area + "cm2");
+    keyboardIn.close();
 
     }
 
