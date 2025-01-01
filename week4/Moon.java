@@ -9,6 +9,7 @@ public class Moon {
         double total_moons = years * 12.37;
         
         System.out.println("Total moons in " + years + " years was " + total_moons);
+        keyboardIn.close();
 
 
     }
