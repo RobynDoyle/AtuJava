@@ -77,8 +77,7 @@ public class FruitHarvest {
 
             System.out.println("Picker #" + numberOfPickers);
             System.out.println("\tNumber of baskets collect = " + (smallbasketNumber + mediumbasketNumber + largebasketNumber));
-            
-            
+             
             System.out.println("\tEarnings for Small Baskets = $" + earningsSmall);
             System.out.println("\tEarnings for Medium Baskets = $" + earningsMedium);
             System.out.println("\tEarnings for Large Baskets = $" + earningsLarge);
@@ -91,25 +90,19 @@ public class FruitHarvest {
             System.out.println();
             System.out.println("***************************************************************************\n");
 
-            
-           
-
-
             // Asks to continue or to repeat input process for another picker. 
-            System.out.print("Process another picker? (y/n)");
-            continueAnotherPicker = keyboardIn.next().charAt(0);
+            do {
+                System.out.print("Process another picker? (y/n): ");
+                continueAnotherPicker = keyboardIn.next().charAt(0);
+                if (continueAnotherPicker != 'y' && continueAnotherPicker != 'n' && continueAnotherPicker != 'Y' && continueAnotherPicker != 'N') {
+                    System.out.println("Invalid input! Please enter 'y' or 'n'.");
+                }
+            } while (continueAnotherPicker != 'y' && continueAnotherPicker != 'n' && continueAnotherPicker != 'Y' && continueAnotherPicker != 'N');
+            
             System.out.println();
 
             System.out.println("***************************************************************************\n");
 
-
-           
-            
-            
-                
-            
-
-            
         }
     overallTotalBasketNumber = overallSmallbasketNumber + overallMediumbasketNumber + overallLargebasketNumber;
     
