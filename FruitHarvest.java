@@ -21,7 +21,7 @@ public class FruitHarvest {
         char continueAnotherPicker = 'y'; // Setting this to 'y' will allow initial entry into the while loop
         Integer numberOfPickers = 0; // Counter to check how many Pickers were processed in this cycle. 
         Integer smallBasketCounter, mediumBasketCounter, largeBasketCounter, overallSmallBasketCounter = 0, overallMediumBasketCounter = 0, overallLargeBasketCounter = 0, overallTotalBasketCounter = 0;
-        double earningsSmall, earningsMedium, earningsLarge, totalEarningsWithoutBonus, bonus, totalEarningsWithBonus, overallTotalPayment = 0; //Cash variables with decimal precision. 
+        double earningsSmall, earningsMedium, earningsLarge, totalEarningsWithoutBonus, bonus = 0, totalEarningsWithBonus, overallTotalPayment = 0; //Cash variables with decimal precision. 
         Integer highestPicker = 1; // Tracks the picker with the highest payment. 
         double highestPickerAmount = 0; // Counts the earnings of todays highest paid picker. 
 
@@ -32,7 +32,7 @@ public class FruitHarvest {
         
         // While loop that runs when sentinel variable is set to 'y' or 'Y'. This runs until user escapes the loop with 'n'. 
         while (continueAnotherPicker == 'y' || continueAnotherPicker == 'Y') {
-            System.err.println();
+            System.out.println();
             numberOfPickers++;
             System.out.println("Picker #" + numberOfPickers + ": Input");
             System.out.println("\tEnter the number of baskets of fruit you collected per basket size");
@@ -119,7 +119,7 @@ public class FruitHarvest {
             if (totalEarningsWithoutBonus != totalEarningsWithBonus){
                 System.out.println(String.format("\tTotal Basket earnings with added bonus = $%.2f", totalEarningsWithBonus));
             }
-            
+
             System.out.println();
             System.out.println("***************************************************************************\n");
 
