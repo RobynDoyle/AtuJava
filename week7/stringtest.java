@@ -15,6 +15,8 @@ public class stringtest {
         bob = "tom";
 
         System.out.println(bob);
+
+        keyboardIn.close();
     }
     
 }
