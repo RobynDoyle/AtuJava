@@ -19,5 +19,8 @@ public class EmployeeTester {
         System.out.println(emp2.calcBonus(keyboardIn.nextDouble()));
         System.out.println(emp2.getAllInfo());
 
+
+        keyboardIn.close();
+
     }
 }
