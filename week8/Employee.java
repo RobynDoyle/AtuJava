@@ -62,9 +62,10 @@ public class Employee {
         return salary / 12;
     }
 
-    public double calcBonus(){
-        double bonus = salary * .3;
-        return bonus;
+    public String calcBonus(double bonusIn){
+        double bonus = salary * bonusIn;
+        String bonusOut = "Bonus is " + String.valueOf(bonus);
+        return bonusOut;
     }
 
     public String getAllInfo(){
