@@ -8,7 +8,7 @@ public class Construct {
 
     public Construct(int num){
         accNum = num;
-        balance = 0.0;
+      
 
     }
 
