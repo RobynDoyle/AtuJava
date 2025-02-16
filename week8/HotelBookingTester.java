@@ -9,6 +9,10 @@ public class HotelBookingTester {
         HotelBooking booking2 = new HotelBooking(1001,"Big Family Room",150, 7);
         int systemInput = 1;
 
+        
+
+
+
         do {
             System.out.println("Choose booking");
             int booking = keyboardIn.nextInt();

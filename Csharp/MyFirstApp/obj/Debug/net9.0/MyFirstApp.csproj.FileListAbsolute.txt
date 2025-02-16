@@ -1,0 +1,15 @@
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/bin/Debug/net9.0/MyFirstApp
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/bin/Debug/net9.0/MyFirstApp.deps.json
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/bin/Debug/net9.0/MyFirstApp.runtimeconfig.json
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/bin/Debug/net9.0/MyFirstApp.dll
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/bin/Debug/net9.0/MyFirstApp.pdb
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.AssemblyInfoInputs.cache
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.AssemblyInfo.cs
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.csproj.CoreCompileInputs.cache
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.sourcelink.json
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.dll
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/obj/Debug/net9.0/refint/MyFirstApp.dll
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.pdb
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/obj/Debug/net9.0/MyFirstApp.genruntimeconfig.cache
+/Users/robyn/Desktop/ROYLE/ROYLE etc/UNI/ATU/Course 24/Java - Software Development/AtuJava/Csharp/MyFirstApp/obj/Debug/net9.0/ref/MyFirstApp.dll

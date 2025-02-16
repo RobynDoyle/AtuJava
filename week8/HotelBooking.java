@@ -8,6 +8,8 @@ public class HotelBooking {
     private String roomType;
     private double pricePerNight;
 
+    public static int age = 50;
+
     // constructors
 
     public HotelBooking(int num, String type, double price){
