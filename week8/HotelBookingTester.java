@@ -3,15 +3,14 @@ import java.util.Scanner;
 
 public class HotelBookingTester {
     
+    /**
+     * @param args
+     */
     public static void main(String[] args){
         Scanner keyboardIn = new Scanner(System.in);
         HotelBooking booking1 = new HotelBooking(2220,"Family Room",55, 3);
         HotelBooking booking2 = new HotelBooking(1001,"Big Family Room",150, 7);
         int systemInput = 1;
-
-        
-
-
 
         do {
             System.out.println("Choose booking");
@@ -25,9 +24,6 @@ public class HotelBookingTester {
             System.out.println("5 = View Total Price");
             System.out.println("0 = Exit");
 
-
-
-
             System.out.println("Choose a menu option");
             systemInput = keyboardIn.nextInt();
 
@@ -40,7 +36,9 @@ public class HotelBookingTester {
                         System.out.println(booking1.toString());
                         break;
                     case 3:
-                        System.out.println(booking1.setNumberOfNights(booking););
+                        System.out.println("Set number of nights: ");
+                        int nights = keyboardIn.nextInt();
+                        booking1.setNumberOfNights(nights); 
                         break;
                     case 4:
                         System.out.println(booking1.pricePerNight());
@@ -49,12 +47,9 @@ public class HotelBookingTester {
                         System.out.println("Invalid day");
             }
 
-            
-
-        } while (systemInput != 0)  
+        } while (systemInput != 0);  
 
         keyboardIn.close();
-
 
     }
 }
