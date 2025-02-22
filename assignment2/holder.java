@@ -1,6 +1,8 @@
 package assignment2;
 import java.util.Scanner;
 
+import CinemaBooking;
+
 class CinemaBooking {
     private int bookingID;
     private String movieTitle;
