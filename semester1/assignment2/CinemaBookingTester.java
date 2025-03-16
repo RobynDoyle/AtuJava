@@ -1,7 +1,7 @@
-package assignment2;
+package semester1.assignment2;
 import java.util.Scanner;
 
-import CinemaBooking;
+import semester1.CinemaBooking;
 
 class CinemaBooking {
     private int bookingID;

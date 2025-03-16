@@ -1,4 +1,4 @@
-package assignment2;
+package semester1.assignment2;
 import java.util.Scanner;
 
 public class testwhile {

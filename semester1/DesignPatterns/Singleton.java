@@ -1,4 +1,4 @@
-package DesignPatterns;
+package semester1.DesignPatterns;
 
 public class Singleton {
     private static Singleton instance;

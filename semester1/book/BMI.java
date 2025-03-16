@@ -1,4 +1,4 @@
-package book;
+package semester1.book;
 import java.util.Scanner;
 
 public class BMI {
