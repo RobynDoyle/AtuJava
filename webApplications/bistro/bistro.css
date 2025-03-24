@@ -55,3 +55,23 @@ nav a:visited { color: #9edfe8; }
 nav a:hover  { color: #103e44;  
 					  background-color: #eef5db; }
 
+@media only screen and (max-width: 1024px){
+	body {margin:0;}
+	#wrapper {width: auto}
+	header {background-image: none; height: 80px; padding: 20px;}
+	nav {float: none; width: auto; border-bottom: 5px solid #4f6367;}
+	main{margin-left: 0;}
+	nav a {display: inline-block; width: 100px; border-style: none; padding-left: 20px;}
+	h1, h2 {font-size: 110%;}
+	p { font-size: 90%;}
+}
+
+@media only screen and (max-width: 600px){
+	header{height: 40px; padding: 10px 0 0 0; border:none;}
+	h2{font-size: 90%;}
+	h1{font-size: 80%; margin:0; text-align: center;}
+	img{display:none}
+	nav { text-align: left; border: none;}
+	nav a {display: block; width: auto; padding: 5px 20px; border-bottom: 2px ridge #00005d;}
+
+}
