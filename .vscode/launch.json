@@ -1,0 +1,315 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "request": "launch",
+            "name": "Launch JavaFX App",
+            "mainClass": "Main",
+            "vmArgs": "--module-path /Users/robyn/Documents/javafx-sdk-24/lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "CinemaBookingTester",
+            "request": "launch",
+            "mainClass": "CinemaBookingTester",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "DesignPatterns.Main",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "CinemaBookingTester(1)",
+            "request": "launch",
+            "mainClass": "assignment2.CinemaBookingTester",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "FruitHarvest",
+            "request": "launch",
+            "mainClass": "assignment2.FruitHarvest",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "testwhile",
+            "request": "launch",
+            "mainClass": "assignment2.testwhile",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "BMI",
+            "request": "launch",
+            "mainClass": "book.BMI",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "ArrayTesterOne",
+            "request": "launch",
+            "mainClass": "java2.week1.ArrayTesterOne",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "TopGoalScorers",
+            "request": "launch",
+            "mainClass": "java2.week1.TopGoalScorers",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "BookArrayList",
+            "request": "launch",
+            "mainClass": "java2.week1.wk1.BookArrayList",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "EmployeeArrayList",
+            "request": "launch",
+            "mainClass": "java2.week1.wk1.EmployeeArrayList",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "java2.week1.wk2.Main",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "modules",
+            "request": "launch",
+            "mainClass": "modules",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "scanner",
+            "request": "launch",
+            "mainClass": "scanner",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Pi",
+            "request": "launch",
+            "mainClass": "week2.Pi",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Tax",
+            "request": "launch",
+            "mainClass": "week2.Tax",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "wage",
+            "request": "launch",
+            "mainClass": "week2.wage",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "BattleShip",
+            "request": "launch",
+            "mainClass": "week3.BattleShip",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Books",
+            "request": "launch",
+            "mainClass": "week3.Books",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Pens",
+            "request": "launch",
+            "mainClass": "week3.Pens",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "TempExtra",
+            "request": "launch",
+            "mainClass": "week3.TempExtra",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Temperature",
+            "request": "launch",
+            "mainClass": "week3.Temperature",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "week3.Test",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Time",
+            "request": "launch",
+            "mainClass": "week3.Time",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Watt",
+            "request": "launch",
+            "mainClass": "week3.Watt",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "exam",
+            "request": "launch",
+            "mainClass": "week3.exam",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "DoWhile",
+            "request": "launch",
+            "mainClass": "week4.DoWhile",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Grade",
+            "request": "launch",
+            "mainClass": "week4.Grade",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "HashMapExample",
+            "request": "launch",
+            "mainClass": "week4.HashMapExample",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Moon",
+            "request": "launch",
+            "mainClass": "week4.Moon",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "MyHashMap",
+            "request": "launch",
+            "mainClass": "week4.MyHashMap",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Ramdate",
+            "request": "launch",
+            "mainClass": "week4.Ramdate",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "SentinelGrade",
+            "request": "launch",
+            "mainClass": "week4.SentinelGrade",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "WhileShopping",
+            "request": "launch",
+            "mainClass": "week4.WhileShopping",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "Array",
+            "request": "launch",
+            "mainClass": "week5.Array",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "BankAccountTester",
+            "request": "launch",
+            "mainClass": "week7.BankAccountTester",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "OblongTester",
+            "request": "launch",
+            "mainClass": "week7.OblongTester",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "stringtest",
+            "request": "launch",
+            "mainClass": "week7.stringtest",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "BookTester",
+            "request": "launch",
+            "mainClass": "week8.BookTester",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "ConstructTester",
+            "request": "launch",
+            "mainClass": "week8.ConstructTester",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "EmployeeTester",
+            "request": "launch",
+            "mainClass": "week8.EmployeeTester",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "HotelBookingTester",
+            "request": "launch",
+            "mainClass": "week8.HotelBookingTester",
+            "projectName": "AtuJava_c5afe04d"
+        }
+    ]
+}
