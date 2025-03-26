@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FirstGui",
+            "request": "launch",
+            "mainClass": "gui.FirstGui",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
             "request": "launch",
             "name": "Launch JavaFX App",
             "mainClass": "Main",
