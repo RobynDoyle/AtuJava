@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <form id="studentform" action="">
+        <label for="studentname">Student Name</label>
+        <input type="text" id="studentname" placeholder="please enter your name">
+        <button type="button" onclick="hello()">Enter</button>
+    </form>
+    <br>
+    <div id="output"></div>
+
+    <script>
+        function hello() {
+            let name=document.getElementById("studentname").value;
+            document.getElementById("output").innerHTML="hello " + name;
+        }
+    </script>
+</body>
+    
+
+</html>

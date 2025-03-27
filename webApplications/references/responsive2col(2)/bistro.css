@@ -1,0 +1,76 @@
+body { background-color:  #4f6367; 
+       	    font-family:  Verdana,  Arial, sans-serif; }
+		
+#wrapper { margin: 0 auto;  
+                  width: 80%;  
+                  background-color: #7a9e9f;  
+                  color: #000066; }
+			   
+header {  background-color: #ffffff; 
+                color: #4f6367; 
+                font-size: 150%; 
+		        padding: 10px;
+				border-bottom: solid 5px #4f6367;
+				background-image: url("bistro.png");
+                background-repeat: no-repeat;
+                background-position: top right;
+            }
+				
+
+nav    {    float: left; 
+             	width: 15%; 
+             	font-weight: bold; 
+             	letter-spacing: 0.1em; }
+				
+		
+main   { background-color:  #ffffff; 
+			 color: #000000; 
+			 padding: 10px 20px; 
+			 overflow: auto;
+			 margin-left: 15%; 
+	         }
+
+footer { font-size: 80%; 
+          	  text-align: center; 
+			  padding: 20px; 
+              background-color: #b8d8d8; 
+           }
+
+h1{color: #4f6367;}
+	
+h2 { color: #7a9e9f; 
+		font-family: Arial, sans-serif;  }
+		 
+#floatright { float: right; 
+				   margin: 10px; }
+					   
+nav a { text-decoration: none; 
+			padding: 20px 10px; 
+			display: block;
+			background-color: #7a9e9f; 
+			border-bottom: 1px solid #ffffff;}
+			
+nav a:link     { color: #ffffff; }
+nav a:visited { color: #9edfe8; }
+nav a:hover  { color: #103e44;  
+					  background-color: #eef5db; }
+
+@media only screen and (max-width: 1024px) {
+body {margin:0;}   /*collapse all margins in the body of the webpage */
+#wrapper {width: auto;} /*wrapper will fill the width of the browser window*/
+header{background-image: none; height: 80px; padding: 20px;} /*removes background image, sets padding and height for the header div */
+nav {float: none; width: auto; border-bottom: 5px solid #4f6367;} /*the nav no longer floats on the left, fills the width of the browser window and has a border*/
+main {margin-left: 0;} /*removes the margin from the content div since nav no longer floating on left and is width of window*/
+nav a {display: inline-block; width: 100px; border-style: none; padding-left: 20px;} /*displays the anchors across the screen and removes the borders from the links and adds padding*/
+h1, h2 {font-size: 110%;} /*headings are 110% of default font size */
+p {font-size: 90%;} /*text is smaller than default */
+}
+
+@media only screen and (max-width: 600px) {
+header{height: 40px; padding: 10px 0 0 0; border: none;} /* Sets padding-top and height and removes border on the header div */
+h2 {font-size: 90%;} /*heading 2 is smaller */
+h1{font-size: 80%; margin:0; text-align: center;} /*heading 1 is smaller, text is centred and no margins */
+img {display: none;} /*do not display image on a mobile device 600px wide or less */
+nav {text-align: left; border: none;} /*remove border align text left*/
+nav a {display: block; width: auto; padding: 5px 20px; border-bottom: 2px ridge #00005d;} /*links are width of screen with padding and a border below */
+}

@@ -1,0 +1,16 @@
+.wrapper h1 {
+	text-align: center;
+	font-size: 30px;
+ 	}
+	
+.image-area {
+   display: flex;                    /* defines a flex container. It enables a flex context for all its direct children */
+   flex-wrap: wrap;              /* by default, flex items will try to fit onto one line. You can can use this property to allow the items to wrap onto the next line */
+   flex-direction: row;         /* this defines the direction flex items are placed in the flex container */
+   align-items: center;         /* this defines the way that flex items are laid out along the cross axis */
+   justify-content: center;    /* this exerts some control over items when they overflow the line */}
+   
+.single-image {padding: 0 20px 0 20px; }              /* assign padding top right bottom left */
+
+img:hover {opacity: 0.5;
+ transition: 0.9s}                      /* sets the transparency level and transition time when hovering over the image */

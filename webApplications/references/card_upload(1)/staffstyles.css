@@ -1,0 +1,57 @@
+h2 { text-align: center; font-size: 30px;}
+	
+.card-area {
+   display: flex;                                /* defines a flex container. It enables a flex context for all its direct children */
+   flex-wrap: wrap;                          /* by default, flex items will try to fit onto one line. You can can use this property to allow the items to wrap onto the next line */
+   flex-direction: row;                     /* this defines the direction flex items are placed in the flex container */
+   justify-content: space-evenly;    /* this exerts some control over items when they overflow the line */}
+   
+
+/* this style sets up the cards with a box shadow and rounded corners.  Cards will have a small margin around all sides and width set to 20% to start */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+/* when the user hovers over the card the box shadow will increase */
+
+.card:hover { box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);}
+
+/* the image holder div houses the image and has padding of 20px */
+
+.image-holder {padding: 20px;   }
+
+/* the container holds the text in the bottom of the card and is styled with padding */
+
+.container {
+  padding: 2px 20px;
+}
+
+/* the corners on the images are slightly rounded and the image is centered in its container using margin auto*/
+
+.card img {
+  border-radius: 5px 5px 0 0;
+  display: block;
+  margin: auto;
+  width: 90%;
+}
+
+img:hover {opacity: 0.5; transition: 0.9s}                      /* sets the transparency level and transition time when hovering over the image */
+
+
+/*media queries are used to change the width of the cards at different viewport sizes*/
+@media only screen and (max-width: 1024px) {
+	  .card {width: 30%;}
+}
+
+@media only screen and (max-width: 768px) {
+	  .card {width: 40%;}
+}
+
+ @media only screen and (max-width: 600px) {
+      .card {width: 90%;}
+}
