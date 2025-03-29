@@ -4,13 +4,37 @@
         <title>ATU Real Estate</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css"> 
+        <link rel="stylesheet "href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <div id="wrapper";>
+        <!-- wrapper container start -->
+        <div id="wrapper">
             <header>
                 <img src="Assets/banner.jpg" alt="Banner" class="banner">
-                <nav></nav>
+                <nav>
+                    <!-- nav bar that creates the menu, which interactive dropdown list. -->
+                    <div class="topnav" id="myTopnav">
+                        <a href="#home" class="active">Home</a>
+                        <div class="dropdown">
+                            <button class="dropbtn">Listings
+                                <!-- icon for Listings option -->
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a href="more.html">All Properties</a>
+                              <a href="more.html">Residential</a>
+                              <a href="more.html">Comercial</a>
+                              <a href="more.html">Sites</a>
+                            </div>
+                          </div>
+                        <a href="more.html">Testimonials</a>
+                        <a href="more.html">Our Team</a>
+                        <a href="more.html">Contact</a>
+                        <a href="more.html">About</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                      </div>
+                </nav>
             </header><!-- end of header -->
             
             <main>
@@ -23,10 +47,12 @@
                             <img src="Assets/site(1).jpg" alt="Property Image">
                         </div>
                         <div class="container"><!--this container div adds a horizontal rule and holds any text about the Property-->
-                        <hr>
-                            <h3>ATU LAND FOR SALE</h3> 
+                            <hr>
+                            <h3>ATU LAND</h3> 
                             <strong>€1,150,000,000.00</strong>
                             <p>Great development opportunity to build student accomadation close to ATU's busiest campus on this 1 acre site!</p> 
+                            <hr>
+                            <a href="more.html">More Details</a>
                         </div>
                     </div>    
 
@@ -36,9 +62,11 @@
                         </div>
                         <div class="container"><!--this container div adds a horizontal rule and holds any text about the Property-->
                             <hr>
-                            <h3>ATU INDUSTRIAL LABS</h3> 
+                            <h3>ATU LABS</h3> 
                             <strong>€550,000,000.00</strong>
-                            <p>Great development opportunity to give your start up the boost it needs by locating in ATU's Premier LAB facilties!</p> 
+                            <p>Great opportunity to give your start up the boost it needs by locating in ATU's Premier LAB facilties in the heart of ATU!</p> 
+                            <hr>
+                            <a href="more.html">More Details</a>
                         </div>
                     </div>
 
@@ -50,7 +78,10 @@
                             <hr>
                             <h3>ATU HOMES</h3> 
                             <strong>€22,000,000.00</strong>
-                            <p>Find your dream home in the middle of the university campus. Enjoy the busy bustle of Universtiy life for the rest of your life!</p> 
+                            <p>Find your dream home in the middle of the university campus. Enjoy the busy bustle of Universtiy life for the rest of your life!</p>
+                            <hr> 
+                            <a href="more.html">More Details</a>
+
                         </div>
                     </div>
 
@@ -60,9 +91,11 @@
                         </div>
                         <div class="container"><!--this container div adds a horizontal rule and holds any text about the Property-->
                         <hr>
-                            <h3>ATU MORE LAND FOR SALE</h3> 
+                            <h3>ATU MORE LAND</h3> 
                             <strong>€5,150,000,000.00</strong>
-                            <p>Great development opportunity to build more student accomadation close to ATU's busiest campus on this 3 acre site!</p> 
+                            <p>Great development opportunity to build more student accomadation close to ATU's busiest campus on this 3 acre site!</p>
+                            <hr> 
+                            <a href="more.html">More Details</a>
                         </div>
                     </div>    
 
@@ -74,7 +107,9 @@
                             <hr>
                             <h3>ATU BIGGER LABS</h3> 
                             <strong>€950,000,000.00</strong>
-                            <p>Best development opportunity to give your slightly bigger start up the boost it needs by locating in ATU's Premier Bigger LAB facilties!</p> 
+                            <p>Best opportunity to give your slightly bigger start up the boost it needs by locating in ATU's Premier Bigger LAB facilties!</p> 
+                            <hr>
+                            <a href="more.html">More Details</a>
                         </div>
                     </div>
 
@@ -84,18 +119,42 @@
                         </div>
                         <div class="container"><!--this container div adds a horizontal rule and holds any text about the Property-->
                             <hr>
-                            <h3>ATU MORE HOMES</h3> 
+                            <h3>ATU NICER HOMES</h3> 
                             <strong>€27,000,000.00</strong>
-                            <p>Find your second dream home in the middle of the university campus. Enjoy the busy bustle of Universtiy life for ever and ever!</p> 
+                            <p>Find your second dream home in the middle of the university campus. Enjoy the busy bustle of Universtiy life for ever and ever!</p>
+                            <hr> 
+                            <a href="more.html">More Details</a>
                         </div>
                     </div>
 
                 </div><!-- end of card area div -->
             </main><!-- end of content -->
             <footer>
-                <div id="text"></div>
-                <div id="icon"></div>
+                <!-- text container that holds copyright info -->
+                <div id="text">
+                    Copyright &copy; 2025
+                </div>
+                <!-- icon container that holds social media icons -->
+                <div id="icon">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-whatsapp"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
             </footer><!-- end of footer -->
         </div> <!-- end of wrapper -->
+        <!-- script controls the button in the nav bar in mobile screen size -->
+        <script>
+            function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                    }
+        </script>
+        <!-- end of script -->
     </body>  
 </html>

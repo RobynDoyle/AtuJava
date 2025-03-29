@@ -1,30 +1,150 @@
-/* 80% margin */
-/* rounded corners on the buttons
-reduce or strip out margins. 
-footer can dissaper so we need to use overflow auto property
-*/
+/* fixes footer dissaperance and sets width to 80% and background color to white. */
+#wrapper{ margin: 0 auto; width: 80%; background-color: white; overflow: auto;}
 
-#wrapper{ margin: 0 auto; width: 80%; background-color: white;}
-
+/* sets background color and fonts */
 body {background-color: #4f6367; font-family: Verdana, sans-serif; margin: 0; padding: 0;}
 
-/* main {background-color: white;} */
-
+/* controls header image */
 header img {display: block; width: 95%; margin: auto}
 
-#headline {padding-left:30px}
 
-.card-area{display: flex; flex-wrap: wrap; justify-content: space-around; background-color: white}
+/* Add a dark - green background color to the top navigation */
+.topnav {
+    background-color: #4f6367;
+    overflow: hidden;
+    width: 95%;
+    margin: auto;
+}
 
-.card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 300px;
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #ee6c4d;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
     text-align: left;
 }
 
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #adbbe0;
+    color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+    }
+    .topnav a.icon {
+    float: right;
+    display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    }
+}
+
+/* positions headline text */
+#headline {padding-left:30px}
+
+/* sets up card container */
+.card-area{display: flex; flex-wrap: wrap; justify-content: space-around; background-color: white}
+
+/* formats card */
+.card {
+    padding: 20px;
+    transition: 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: left;
+    position: relative;
+    margin-top: 30px;
+}
+
+/* fomats images in card */
 .card img{
     border-radius: 5px 5px 0 0;
     display: block;
@@ -32,21 +152,84 @@ header img {display: block; width: 95%; margin: auto}
     margin: auto;
 }
 
+/* sets card image hover behaviour */
 .card img:hover {
     opacity:0.5;
     transition: 0.9s
 }
 
-
-@media only screen and (max-width: 1024px){
-    .card {width: 30%}
+/* sets card border hover behaviour */
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
 }
 
+/* formates link button */
+.card a{
+    margin: auto;
+    padding: 3px 8px;
+    background-color: #ee6c4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 30%;
+    text-decoration: none;
+}
+
+/* sets link button hover behaviour */
+.card a:hover{
+    background-color: #adbbe0;
+}
+
+/* fomrats footer */
+footer{
+    background-color: #4f6367; width: 95%; height: 150px; margin: auto; margin-top: 50px;}
+
+/* formats text div in footer */
+#text{
+    float: left; width: 30%; padding: 20px; color: white;
+}
+
+/* formats icon div in footer */    
+#icon{
+    float: right; width: 50%; text-align: right; padding: 10px; overflow: auto;
+}
+
+/* formats icons in footer */
+footer .fa{
+    padding: 10px; font-size: 30px; width: 50px; text-align: center; text-decoration: none; margin: 5px 2px;
+}
+
+/* sets icon hover behaviour */
+.fa:hover {
+    opacity: 0.7;
+}
+/* sets icon colors */
+.fa-facebook {background: #385998; color: white;}
+
+.fa-twitter {background: #55ACEE; color: white;}
+
+.fa-whatsapp {background: #07c500; color: white;}
+
+.fa-youtube {background: #c50000; color: white;}
+
+.fa-instagram {background: #ae00c5; color: white;}
+
+/* sets viewport edits */
+@media only screen and (max-width: 1024px){
+    .card {width: 30%}
+	#wrapper {width: auto}
+}
+/* sets viewport edits */
 @media only screen and (max-width: 768px){
     .card {width: 40%}
 }
-
+/* sets viewport edits */
 @media only screen and (max-width: 600px){
     .card {width: 90%}
+    #text {display: none;}
+    #icon {float:left; width: 100%; text-align: left;}
+    footer{height: 85px;}
 }
 
