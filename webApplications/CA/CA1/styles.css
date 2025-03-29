@@ -25,3 +25,28 @@ header img {display: block; width: 95%; margin: auto}
     text-align: left;
 }
 
+.card img{
+    border-radius: 5px 5px 0 0;
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.card img:hover {
+    opacity:0.5;
+    transition: 0.9s
+}
+
+
+@media only screen and (max-width: 1024px){
+    .card {width: 30%}
+}
+
+@media only screen and (max-width: 768px){
+    .card {width: 40%}
+}
+
+@media only screen and (max-width: 600px){
+    .card {width: 90%}
+}
+
