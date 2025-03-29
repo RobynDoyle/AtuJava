@@ -4,6 +4,24 @@ reduce or strip out margins.
 footer can dissaper so we need to use overflow auto property
 */
 
-#wrapper{ margin: 0 auto;  
-    width: 80%;  
-     }
+#wrapper{ margin: 0 auto; width: 80%; background-color: white;}
+
+body {background-color: #4f6367; font-family: Verdana, sans-serif; margin: 0; padding: 0;}
+
+/* main {background-color: white;} */
+
+header img {display: block; width: 95%; margin: auto}
+
+#headline {padding-left:30px}
+
+.card-area{display: flex; flex-wrap: wrap; justify-content: space-around; background-color: white}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: left;
+}
+
