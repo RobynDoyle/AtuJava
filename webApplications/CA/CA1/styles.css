@@ -1,0 +1,9 @@
+/* 80% margin */
+/* rounded corners on the buttons
+reduce or strip out margins. 
+footer can dissaper so we need to use overflow auto property
+*/
+
+#wrapper{ margin: 0 auto;  
+    width: 80%;  
+     }

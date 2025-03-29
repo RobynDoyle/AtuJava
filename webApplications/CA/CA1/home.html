@@ -7,14 +7,59 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
-            <img src="Assets/banner.jpg" alt="Banner" class="banner">
-            <nav></nav>
-        </header>
-        
-        <main>
-            <h1>All ATU Properties</h1>
-        </main>
-        <footer></footer>
-    </body>
+        <div id="wrapper";>
+            <header>
+                <img src="Assets/banner.jpg" alt="Banner" class="banner">
+                <nav></nav>
+            </header><!-- end of header -->
+            
+            <main>
+                <h1>All ATU Properties</h1>
+
+                <div class="card-area"><!-- set up the flex container-->
+
+                    <div class="card"><!--each card is a child of the card-area flex container-->
+                        <div class="image-holder"><!--the image-holder is a div to hold the image of the Property-->
+                            <img src="Assets/site(1).jpg" alt="Property Image">
+                        </div>
+                        <div class="container"><!--this container div adds a horizontal rule and holds any text about the Property-->
+                        <hr>
+                            <h3>ATU LAND FOR SALE</h3> 
+                            <strong>€1,150,000,000.00</strong>
+                            <p>Great development opportunity to build student accomadation close to ATU's busiest campus on this 1 acre site!</p> 
+                        </div>
+                    </div>    
+
+                    <div class="card"><!--each card is a child of the card-area flex container-->
+                        <div class="image-holder"><!--the image-holder is a div to hold the image of the Property-->
+                            <img src="Assets/commercial(1).jpg" alt="Property Image">
+                        </div>
+                        <div class="container"><!--this container div adds a horizontal rule and holds any text about the Property-->
+                            <hr>
+                            <h3>ATU INDUSTRIAL LABS</h3> 
+                            <strong>€550,000,000.00</strong>
+                            <p>Great development opportunity to give your start up the boost it needs be locating in ATU's Premier LAB facilties!</p> 
+                        </div>
+                    </div>
+
+                    <div class="card"><!--each card is a child of the card-area flex container-->
+                        <div class="image-holder"><!--the image-holder is a div to hold the image of the Property-->
+                            <img src="Assets/residential.jpg" alt="Property Image">
+                        </div>
+                        <div class="container"><!--this container div adds a horizontal rule and holds any text about the Property-->
+                            <hr>
+                            <h3>ATU HOMES</h3> 
+                            <strong>€22,000,000.00</strong>
+                            <p>Find your dream home in the middle of the university campus. Enjoy the busy bustle of Universtiy life for the rest of your life!</p> 
+                        </div>
+                    </div>
+
+                </div><!-- end of card area div -->
+            </main><!-- end of content -->
+            <footer>
+                <div id="text"></div>
+                <div id="icon"></div>
+            </footer><!-- end of footer -->
+        </div> <!-- end of wrapper -->
+    </body>  
 </html>
