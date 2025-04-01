@@ -184,7 +184,7 @@ header img {display: block; width: 95%; margin: auto}
 
 /* fomrats footer */
 footer{
-    background-color: #4f6367; width: 95%; height: 150px; margin: auto; margin-top: 50px; overflow: auto}
+    background-color: #4f6367; width: 95%; height: 150px; margin: auto; margin-top: 50px;}
 
 /* formats text div in footer */
 #text{
