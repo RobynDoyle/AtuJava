@@ -25,10 +25,11 @@ public class EnterName extends Application {
                 lblOutput.setText("Hello "+txtName.getText());
             }
         };
+        btnName.setOnAction(output);
 
         VBox root = new VBox();
         root.getChildren().addAll(lblName,txtName, btnName, lblOutput);
-        Scene scene = new Scene(root,250 150);
+        Scene scene = new Scene(root,250, 150);
         stage.setScene(scene);
         stage.show();
 
