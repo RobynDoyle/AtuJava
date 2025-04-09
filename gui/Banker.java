@@ -17,8 +17,6 @@ public class Banker extends Application {
 
     public void start(Stage stage){
 
-        
-
         Button btnViewAlldetials = new Button("View All Details €");
         Label lblViewAlldetials = new Label();
         
@@ -28,43 +26,58 @@ public class Banker extends Application {
         Label lblDeposit = new Label("Enter Deposit Amount");
         TextField txtDeposit = new TextField();
         txtDeposit.setMaxWidth(50);
-        Button btnDeposit = new Button("Execute");
+        Button btnDeposit = new Button("Execute Deposit");
         
         Label lblWithdraw = new Label("Enter Withdrawal Amount");
         TextField txtWithdraw = new TextField();
         txtWithdraw.setMaxWidth(50);
-        Button btnWithdrawal = new Button("Execute");
+        Button btnWithdrawal = new Button("Execute Withdrawal");
 
         btnViewAlldetials.setOnAction(e -> {lblViewAlldetials.setText(currAcc.toString());
         }
         );
-       
-        // btnConvertToDollar.setOnAction(e -> {
-        //     try{
-        //         // double euro = Double.parseDouble(txtEuro.getText());
-        //         double euro = Double.parseDouble(txtEuro.getText());
-        //         double euroToDollar = euro * 0.88;
 
-        //         lblResultConDollar.setText("€" + euroToDollar);
-        //     } catch (NumberFormatException ex) {
-        //         lblResultConDollar.setText("Please Enter valid numbers.");
-        //     }
-        // });
+        btnViewBalance.setOnAction(e -> {lblViewBalance.setText("Balance: €" + currAcc.viewBalance());});
+
+        btnDeposit.setOnAction(e -> {
+            try {
+                double deposit = Double.parseDouble(txtDeposit.getText());
+                currAcc.depositMoney(deposit);
+                lblDeposit.setText("€" + deposit + " Deposited. Current Balance = " + currAcc.viewBalance());
+            } catch (NumberFormatException ex) {
+                lblDeposit.setText("Wrong number format");
+                // TODO: handle exception
+            }
+        });
+       
+        btnWithdrawal.setOnAction(e -> {
+            double withdrawal = Double.parseDouble(txtWithdraw.getText());
+            currAcc.withdrawMoney(withdrawal);
+            lblWithdraw.setText("€" + withdrawal + " Withdrawn. Current Balance = " + currAcc.viewBalance());
+        });
 
         HBox inputOne = new HBox(15);
         inputOne.getChildren().addAll(btnViewAlldetials, lblViewAlldetials);
         inputOne.setAlignment(Pos.CENTER_LEFT);
         
-        // HBox inputTwo = new HBox(10);
-        // inputTwo.getChildren().addAll(lblDollar, txtDollar, btnConvertToEuro, lblResultConEuro);
-        // inputTwo.setAlignment(Pos.CENTER);
-
+        HBox inputTwo = new HBox(15);
+        inputTwo.getChildren().addAll(btnViewBalance, lblViewBalance);
+        inputTwo.setAlignment(Pos.CENTER_LEFT);
+        
+        HBox inputThree = new HBox(15);
+        inputThree.getChildren().addAll(txtDeposit, btnDeposit, lblDeposit);
+        inputThree.setAlignment(Pos.CENTER_LEFT);
+        
+        HBox inputFour = new HBox(15);
+        inputFour.getChildren().addAll(txtWithdraw, btnWithdrawal, lblWithdraw);
+        inputFour.setAlignment(Pos.CENTER_LEFT);
+    
         VBox root = new VBox(25);
         root.setAlignment(Pos.CENTER);
-        root.getChildren().addAll(inputOne);
+        root.getChildren().addAll(inputOne, inputTwo, inputThree, inputFour);
         Scene scene = new Scene(root, 550, 350);
         stage.setScene(scene);
-        stage.setTitle("Convert");
+        stage.setTitle("Bank Account");
         stage.show();
     }
 
