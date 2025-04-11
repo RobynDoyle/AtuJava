@@ -16,7 +16,7 @@ import javafx.geometry.Pos;
 import java.util.ArrayList;
 
 public class AtuEstateAgents extends Application {
-    // List to store properties
+    // List to store properties - these are the objects created from the Property class
     ArrayList<Property> propertyList = new ArrayList<>();
 
     public void start(Stage stage){
@@ -64,12 +64,18 @@ public class AtuEstateAgents extends Application {
 
         Button btnAddProperty = new Button("Add Property");
         Button btnViewAllProperties = new Button("View All Properties");
+
+        // Function buttons that require input
+        Label lblRemoveProperty = new Label("Property Number");
+        TextField textRemoveProperty = new TextField();
+        textRemoveProperty.setMaxWidth(70);
         Button btnRemoveProperty = new Button("Remove Property");
+
         Button btnUpdatePropertyPrice = new Button("Update Property Price");
 
         // Output area
         TextArea textOutput = new TextArea();
-        textOutput.setMaxSize(800, 200);
+        textOutput.setPrefSize(800, 200);
         textOutput.setEditable(false);
 
         // Bonus Function Buttons
@@ -109,16 +115,45 @@ public class AtuEstateAgents extends Application {
                 // stores variables into the array
                 Property p = new Property(streetValue, townValue, countyValue, bedsValue, bathValue, receptionsValue, priceValue, typeValue);
                 propertyList.add(p);
-                textOutput.setText("Property added successfully!");
+                textOutput.setText("The property was added to the database");
+
+                // For next input clear textfields
+                textPrice.clear(); textStreet.clear(); textType.clear();  textTown.clear(); textCounty.clear(); textBeds.clear();
+                textReceptions.clear(); textBath.clear(); 
             } catch (NumberFormatException ex) {
-                textOutput.setText("Error: Please enter valid numbers.");
+                textOutput.setText("Enter numbers only.");
             }
         });
 
         btnViewAllProperties.setOnAction(e-> {
-            try{
-                
+            // clear the text area of any previous text
+            textOutput.clear();
+            // prints out the properties in the array list
+            for (Property p : propertyList) {
+                textOutput.appendText(p.toString() + "\n");
             }
+
+        });
+
+        btnRemoveProperty.setOnAction(e-> {
+            // clear output area
+            textOutput.clear();
+            try{
+                int removeProperty = Integer.parseInt(textRemoveProperty.getText());
+
+                for (int i = 0; i < propertyList.size(); i++) {
+                    if (propertyList.get(i).viewPropNo() == removeProperty) {
+                        // remove the property when found
+                        propertyList.remove(i);
+                        textOutput.setText(removeProperty + " property was removed.");
+                    } 
+                
+             
+                }   
+            } catch (NumberFormatException ex) {
+                textOutput.setText("Please enter a valid property number.");
+            }
+
 
         });
 
@@ -143,8 +178,12 @@ public class AtuEstateAgents extends Application {
         buttonTitle.setAlignment(Pos.CENTER);
         
         HBox buttons1 = new HBox(10);
-        buttons1.getChildren().addAll(btnAddProperty, btnViewAllProperties, btnRemoveProperty, btnUpdatePropertyPrice);
+        buttons1.getChildren().addAll(btnAddProperty, btnViewAllProperties);
         buttons1.setAlignment(Pos.CENTER);
+        
+        HBox buttons2 = new HBox(10);
+        buttons2.getChildren().addAll(lblRemoveProperty, textRemoveProperty, btnRemoveProperty, btnUpdatePropertyPrice);
+        buttons2.setAlignment(Pos.CENTER);
         
         HBox boxArea = new HBox(10);
         boxArea.getChildren().addAll(textOutput);
@@ -156,7 +195,7 @@ public class AtuEstateAgents extends Application {
 
         VBox root = new VBox(25);
         root.setAlignment(Pos.CENTER);
-        root.getChildren().addAll(headline, input1, input2, buttonTitle, buttons1, boxArea, bonusFunction);
+        root.getChildren().addAll(headline, input1, input2, buttonTitle, buttons1, buttons2, boxArea, bonusFunction);
         Scene scene = new Scene(root, 1000, 800);
         stage.setScene(scene);
         stage.setTitle("ATU Estate Agents");

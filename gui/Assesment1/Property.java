@@ -66,7 +66,7 @@ public class Property
    {
       return "\nProperty number: " + propertyNo + "\t Street: " + propertyStreet + "\t Town: " + propertyTown +
              "\t County: " + propertyCounty + "\t Number beds: " + noBeds + "\t Number baths: " + noBaths +
-             "\t Number reception rooms: " + noReception + "\nPrice â‚¬" + price + "\t Type: " + propertyType + "\n";
+             "\t Number reception rooms: " + noReception + "\nPrice €" + price + "\t Type: " + propertyType + "\n";
    }
 
    // Accessor methods
