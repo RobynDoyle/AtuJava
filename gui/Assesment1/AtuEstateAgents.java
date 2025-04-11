@@ -16,6 +16,7 @@ import javafx.geometry.Pos;
 import java.util.ArrayList;
 
 public class AtuEstateAgents extends Application {
+    // List to store properties
     ArrayList<Property> propertyList = new ArrayList<>();
 
     public void start(Stage stage){
@@ -77,7 +78,52 @@ public class AtuEstateAgents extends Application {
         Button btnF3 = new Button("F3");
         
 
-////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+        // Button to add property to Array
+        btnAddProperty.setOnAction(e -> {
+            try {
+                // assigns text fields to variables.
+                int receptionsValue = Integer.parseInt(textReceptions.getText());
+                String streetValue = textStreet.getText();
+                double priceValue = Double.parseDouble(textPrice.getText());
+                String townValue = textTown.getText();
+                String countyValue = textCounty.getText();
+                int bedsValue = Integer.parseInt(textBeds.getText());
+                String typeValue = textType.getText();
+                int bathValue = Integer.parseInt(textBath.getText());
+                
+                
+                // Checks is String fields are not empty
+                if (streetValue.isEmpty() || townValue.isEmpty() || countyValue.isEmpty() || typeValue.isEmpty()) {
+                    textOutput.setText("Error: All fields must be filled.");
+                    return;
+                }
+                // CHecks if number fields are not empty and numbers not non numbers.
+                if (bedsValue < 0 || receptionsValue < 0 || bathValue < 0 || priceValue < 0) {
+                    textOutput.setText("Error: Numbers must be positive.");
+                    return;
+                }
+
+
+                // stores variables into the array
+                Property p = new Property(streetValue, townValue, countyValue, bedsValue, bathValue, receptionsValue, priceValue, typeValue);
+                propertyList.add(p);
+                textOutput.setText("Property added successfully!");
+            } catch (NumberFormatException ex) {
+                textOutput.setText("Error: Please enter valid numbers.");
+            }
+        });
+
+        btnViewAllProperties.setOnAction(e-> {
+            try{
+                
+            }
+
+        });
+
+
+
 
         // Horizontal Boxes to align elements
         HBox headline = new HBox(10);
@@ -113,7 +159,7 @@ public class AtuEstateAgents extends Application {
         root.getChildren().addAll(headline, input1, input2, buttonTitle, buttons1, boxArea, bonusFunction);
         Scene scene = new Scene(root, 1000, 800);
         stage.setScene(scene);
-        stage.setTitle("Area");
+        stage.setTitle("ATU Estate Agents");
         stage.show();
         
     }
