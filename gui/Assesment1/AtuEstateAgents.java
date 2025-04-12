@@ -83,10 +83,17 @@ public class AtuEstateAgents extends Application {
         textOutput.setPrefSize(800, 200);
         textOutput.setEditable(false);
 
-        // Bonus Function Buttons
-        Button btnF1 = new Button("F1");
-        Button btnF2 = new Button("F2");
-        Button btnF3 = new Button("F3");
+        // My own functions
+        Label lblOwn = new Label("**** Own functions ****");
+
+        // Search by Town Function 
+        Label lblSearchTown = new Label("Enter town name");
+        TextField textSearchTown = new TextField();
+        Button btnF1 = new Button("Search Town");
+
+
+        Button btnF2 = new Button("Show cheapest property");
+        Button btnF3 = new Button("Increase All Prices by 10%");
         
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -188,6 +195,59 @@ public class AtuEstateAgents extends Application {
 
         });
 
+        btnF1.setOnAction(e -> {
+            textOutput.clear();
+            String searchTown = textSearchTown.getText().trim();
+        
+            if (searchTown.isEmpty()) {
+                textOutput.setText("Please enter a town name.");
+                return;
+            }
+        
+        
+            for (Property p : propertyList) {
+                if (p.viewTown().equalsIgnoreCase(searchTown)) {
+                    textOutput.appendText(p.toString() + "\n");
+                
+                }
+            }
+        
+        
+          
+        });
+
+        btnF2.setOnAction(e -> {
+            textOutput.clear();
+            
+        
+            Property cheapestProperty = propertyList.get(0);
+        
+            for (Property p : propertyList) {
+                if (p.viewPrice() < cheapestProperty.viewPrice()) {
+                    cheapestProperty = p;
+                }
+            }
+        
+            textOutput.setText("The cheapest properties details are:\n" + cheapestProperty.toString());
+        });
+
+
+        // this function increases the price by 10% for al properties
+        btnF3.setOnAction(e -> {
+            textOutput.clear();
+        
+    
+        
+            for (Property p : propertyList) {
+                double currentPrice = p.viewPrice();
+                double newPrice = currentPrice * 1.10; // increases the price by 10%
+                p.setPrice(newPrice);
+            }
+        
+            textOutput.setText("All property prices have been increased by 10% to match this years inflation.");
+        });
+        
+
 
 
 
@@ -220,17 +280,28 @@ public class AtuEstateAgents extends Application {
         buttons3.getChildren().addAll(lblUpdatePricePropertyNumber, textUpdatePricePropertyNumber, lblPropertyNewPrice, textUpdatePropertyPrice, btnUpdatePropertyPrice);
         buttons3.setAlignment(Pos.CENTER);
         
+       
+        
         HBox boxArea = new HBox(10);
         boxArea.getChildren().addAll(textOutput);
         boxArea.setAlignment(Pos.CENTER);
         
+        HBox labelOwn = new HBox(10);
+        labelOwn.getChildren().addAll(lblOwn);
+        labelOwn.setAlignment(Pos.CENTER);
+
+        HBox buttons4 = new HBox(10);
+        buttons4.getChildren().addAll(lblSearchTown, textSearchTown, btnF1);
+        buttons4.setAlignment(Pos.CENTER);
+        
         HBox bonusFunction = new HBox(10);
-        bonusFunction.getChildren().addAll(btnF1, btnF2, btnF3);
+        bonusFunction.getChildren().addAll(btnF2, btnF3);
         bonusFunction.setAlignment(Pos.CENTER);
 
+        // setting up the scene for the gui
         VBox root = new VBox(25);
         root.setAlignment(Pos.CENTER);
-        root.getChildren().addAll(headline, input1, input2, buttonTitle, buttons1, buttons2, buttons3, boxArea, bonusFunction);
+        root.getChildren().addAll(headline, input1, input2, buttonTitle, buttons1, buttons2, buttons3, boxArea, labelOwn, buttons4, bonusFunction);
         Scene scene = new Scene(root, 1000, 800);
         stage.setScene(scene);
         stage.setTitle("ATU Estate Agents");
