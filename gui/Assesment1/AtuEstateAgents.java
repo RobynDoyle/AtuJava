@@ -70,7 +70,12 @@ public class AtuEstateAgents extends Application {
         TextField textRemoveProperty = new TextField();
         textRemoveProperty.setMaxWidth(70);
         Button btnRemoveProperty = new Button("Remove Property");
-
+        
+        Label lblUpdatePricePropertyNumber = new Label("Property Number");
+        TextField textUpdatePricePropertyNumber = new TextField();
+        Label lblPropertyNewPrice = new Label("New Price");
+        TextField textUpdatePropertyPrice = new TextField();
+        textUpdatePropertyPrice.setMaxWidth(70);
         Button btnUpdatePropertyPrice = new Button("Update Property Price");
 
         // Output area
@@ -121,7 +126,7 @@ public class AtuEstateAgents extends Application {
                 textPrice.clear(); textStreet.clear(); textType.clear();  textTown.clear(); textCounty.clear(); textBeds.clear();
                 textReceptions.clear(); textBath.clear(); 
             } catch (NumberFormatException ex) {
-                textOutput.setText("Enter numbers only.");
+                textOutput.setText("Double check the entries, they shpuld be numbers or strings.");
             }
         });
 
@@ -157,6 +162,32 @@ public class AtuEstateAgents extends Application {
 
         });
 
+        btnUpdatePropertyPrice.setOnAction(e-> {
+            // clear output area
+            textOutput.clear();
+
+            try{
+                int updatePricePropertyNumber = Integer.parseInt(textUpdatePricePropertyNumber.getText());
+                double updatePrice = Double.parseDouble(textUpdatePropertyPrice.getText());
+
+                // making sure price is above 0 and thus not empty
+                if (updatePrice <= 0) {
+                    textOutput.setText("Price needs to be more then 0");
+                    return;
+                }
+                for (Property p : propertyList) {
+                    if (p.viewPropNo() == updatePricePropertyNumber) {
+                        p.setPrice(updatePrice);
+                        textOutput.setText("Property " + updatePricePropertyNumber + " was updated to €" + updatePrice);
+                        break;
+                    }
+                }  
+            } catch (NumberFormatException ex) {
+                textOutput.setText("Please enter a valid property number and price.");
+            }
+
+        });
+
 
 
 
@@ -182,8 +213,12 @@ public class AtuEstateAgents extends Application {
         buttons1.setAlignment(Pos.CENTER);
         
         HBox buttons2 = new HBox(10);
-        buttons2.getChildren().addAll(lblRemoveProperty, textRemoveProperty, btnRemoveProperty, btnUpdatePropertyPrice);
+        buttons2.getChildren().addAll(lblRemoveProperty, textRemoveProperty, btnRemoveProperty);
         buttons2.setAlignment(Pos.CENTER);
+        
+        HBox buttons3 = new HBox(10);
+        buttons3.getChildren().addAll(lblUpdatePricePropertyNumber, textUpdatePricePropertyNumber, lblPropertyNewPrice, textUpdatePropertyPrice, btnUpdatePropertyPrice);
+        buttons3.setAlignment(Pos.CENTER);
         
         HBox boxArea = new HBox(10);
         boxArea.getChildren().addAll(textOutput);
@@ -195,7 +230,7 @@ public class AtuEstateAgents extends Application {
 
         VBox root = new VBox(25);
         root.setAlignment(Pos.CENTER);
-        root.getChildren().addAll(headline, input1, input2, buttonTitle, buttons1, buttons2, boxArea, bonusFunction);
+        root.getChildren().addAll(headline, input1, input2, buttonTitle, buttons1, buttons2, buttons3, boxArea, bonusFunction);
         Scene scene = new Scene(root, 1000, 800);
         stage.setScene(scene);
         stage.setTitle("ATU Estate Agents");
