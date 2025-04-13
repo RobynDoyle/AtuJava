@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>CA2 About Us Page</title>
+        <meta charset="utf-8">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Link to your custom css -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- set the viewport element to give the browser instructions on how to control the page's dimensions and scaling-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap Icons CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Font Awesome Icons CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- link to stackpath Bootstrap for scrolling slideshow -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-r4NyPzZr58AfzC8EwB2ZtFb8KbbAp8MyF+RXER5bYlK/5tJwNnQU5TYrjwEhjLXB" crossorigin="anonymous">
+
+    </head>
+    <body>
+
+        <div class="container-fluid p-0">
+
+        <!--menu-->
+       
+        <!--create a menu (code should be adapted from Bootstrap example files)-->
+        <!-- https://getbootstrap.com/docs/5.0/examples/navbars/ -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+            <div class="container-fluid">
+              <a class="navbar-brand text-warning" href="Home.html">ROYLE Properties</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+              <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Home.html">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Listings</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                      <li><a class="dropdown-item" href="#">All Properties</a></li>
+                      <li><a class="dropdown-item" href="#">Residential</a></li>
+                      <li><a class="dropdown-item" href="#">Commercial</a></li>
+                      <li><a class="dropdown-item" href="#">Sites</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="AboutUs.html">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+
+                
+
+                <!-- Search bar -->
+                <form class="d-flex me-3">
+                  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                </form>
+
+                <!-- buttons taken from headers example at https://getbootstrap.com/docs/5.3/examples/headers/# -->
+                  <div class="text-end">
+                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                  </div>
+              </div>
+            </div>
+          </nav>
+
+          <section class="py-5">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <h2>Welcome to ROYLE Properties</h2>
+                  <p>ROYLE Properties was established in 2022, specialising in residential and commercial properties as well as sites for development. The business is growing fast and has recently moved to a new office, beside Apple's HQ building in California. With a strong focus on quality service and attention to detail, ROYLE Properties is the right partner for you to find the property you are looking for.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="Assets/Office.jpg" alt="Company HQ" class="img-fluid rounded">
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+          <!-- Carosel of services from https://getbootstrap.com/docs/5.0/components/carousel/ -->
+          <section class="py-5 bg-dark">
+            <div class="container">
+              <h3 class="text-center mb-4 text-warning">Our Services</h3>
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+          
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+          
+                  <!-- First set of services slide -->
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                          <div class="card-body">
+                            <i class="bi bi-house-door-fill fs-1 text-warning"></i>
+                            <h5 class="card-title">Residential Sales</h5>
+                            <p class="card-text">Helping buyers find perfect homes in Small Springs.</p>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                          <div class="card-body">
+                            <i class="bi bi-building fs-1 text-warning"></i>
+                            <h5 class="card-title">Commercial Property</h5>
+                            <p class="card-text">Matching local businesses with ideal premises.</p>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                          <div class="card-body">
+                            <i class="bi bi-map fs-1 text-warning"></i>
+                            <h5 class="card-title">Land Sales</h5>
+                            <p class="card-text">Supporting development with key land sites.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <!-- Second  set of services slide -->
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                          <div class="card-body">
+                            <i class="bi bi-sun fs-1 text-warning"></i>
+                            <h5 class="card-title">Holiday Homes</h5>
+                            <p class="card-text">Seaside and scenic retreats for international buyers.</p>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                          <div class="card-body">
+                            <i class="bi bi-currency-dollar fs-1 text-warning"></i>
+                            <h5 class="card-title">Investment Consulting</h5>
+                            <p class="card-text">Guiding investors through profitable opportunities.</p>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                          <div class="card-body">
+                            <i class="bi bi-bar-chart-line-fill fs-1 text-warning"></i>
+                            <h5 class="card-title">Property Valuation</h5>
+                            <p class="card-text">Accurate and fair market assessments for sellers.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                </div>
+          
+                <!-- Controls for the carousel  -->
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>   
+                  
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button> -->
+              </div>
+            </div>
+          </section>
+          
+      
+
+
+        <!-- header section perhaps with background image could go above or below the menu-->
+        <section class="m-0 p-0"> <!--I removed margins and padding on this section so my image would fill the space. If  -->
+            <!-- New section with background image and text overlay -->
+            <!-- <section>
+                <div class="bg-image">
+                    <div class="overlay">
+                        <div>
+                            <h1>Diamond Properties</h1>
+                            <p>Donegal's leading property and financial services advisors</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section> -->
+
+        <!-- company image & intro text -->
+        <section>
+        <!--This container should have one row with two columns - one for the introductory text and one for the image- refer slide 23 and 24-->
+        </section>
+
+
+                    
+
+        <!--services offered-->
+        <section> 
+        <!-- This container should outline the services that your company offers (6 services), you should use cards set out in columns, a grid or a carousel - see notes -->
+        </section>
+
+        <!-- our team -->
+        <section>
+        <!-- This container will store info on your staff. The team should have at least 4 members. I used and adapted Bootstrap Brain Component - see notes-->
+        </section>
+
+        <!-- contact form -->
+        <section>
+        <!--This container should house a contact form. You can adapt sample forms from Bootsrap documentation or use the simple form provided as a starting point. You need to add Bootstrap icons to the form fields (see slide 45) and a select element dropdown (see slide 39) relating to each of your services outlined in the services section -->
+            <section>
+                <!--form code adapted from https://mdbootstrap.com/docs/standard/forms/overview/ i moved the labels above the input boxes and added placeholder text -->
+            <div class="text-center">
+            <h3>Get in Touch</h3>
+            <p class="lead text-muted">Any questions? Fill out the form to get in touch</p>
+            </div>
+            <div class="container-lg">
+                <div class="row justify-content-center">
+                <form style="width: 26rem;">
+                <!-- Name input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="form4Example1">Name:</label>
+                    <input type="text" id="form4Example1" class="form-control" placeholder="Enter your name" />
+                
+                </div>
+                
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="form4Example2">Email address:</label>
+                    <input type="email" id="form4Example2" class="form-control" placeholder="Enter your email address" />
+                </div>
+                
+                <!-- Message input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="form4Example3">Message</label>
+                    <textarea class="form-control" id="form4Example3" rows="4" placeholder="Enter your message"></textarea>
+                    
+                </div>
+                
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                    <input
+                    class="form-check-input me-2"
+                    type="checkbox"
+                    value=""
+                    id="form4Example4"
+                    checked
+                    />
+                    <label class="form-check-label" for="form4Example4">
+                    Send me a copy of this message
+                    </label>
+                </div>
+                
+                <!-- Submit button -->
+                <div class="text-center">  
+                <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4 w-100">Send</button>
+                </div>
+                </form>
+            </div>
+            </div>
+        </section>
+        </section>
+
+
+        <!--footer-->
+        <footer class="">
+        <!--declare a footer (code should be adapted from Bootstrap Example Files)-->
+        </footer>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

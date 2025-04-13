@@ -1,7 +1,6 @@
 // Author: Robyn Doyle
 // Student Number: L00188328
 
-package gui.Assesment1;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
