@@ -29,7 +29,7 @@
         <!--menu-->
        
         <!--create a menu (code should be adapted from Bootstrap example files)-->
-        <!-- https://getbootstrap.com/docs/5.0/examples/navbars/ -->
+        <!-- navbar adapted from https://getbootstrap.com/docs/5.0/examples/navbars/ where i got the code by right clicking and selecting inspect and getitng the code -->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
             <div class="container-fluid">
               <a class="navbar-brand text-warning" href="Home.html">ROYLE Properties</a>
@@ -95,28 +95,25 @@
 
 
 
-          <!-- Carosel of services from https://getbootstrap.com/docs/5.0/components/carousel/ -->
-          <section class="py-5 bg-dark">
+          <!-- Carosel of services from https://getbootstrap.com/docs/5.0/components/carousel/ i right clicked the page, selected inspect and chose the code that I needed from there. made some adjustments to suit my website. -->
+          <section class="py-5 bg-dark"> 
+            <!-- set it (background) to dark to provide contrast and repetition, matching my header and overall aesthethic of the website -->
             <div class="container">
               <h3 class="text-center mb-4 text-warning">Our Services</h3>
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              </div>
-          
+              
               <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
                 <div class="carousel-inner">
           
                   <!-- First set of services slide -->
-                  <div class="carousel-item active">
+                  <div class="carousel-item active"> <!-- this active tag means this is the first slide shown in me carousel-->
                     <div class="row">
                       <div class="col-md-4">
                         <div class="card h-100 text-center">
                           <div class="card-body">
-                            <i class="bi bi-house-door-fill fs-1 text-warning"></i>
-                            <h5 class="card-title">Residential Sales</h5>
-                            <p class="card-text">Helping buyers find perfect homes in Small Springs.</p>
+                            <i class="bi bi-key-fill fs-1 text-warning"></i>
+                            <h5 class="card-title">Residential Units</h5>
+                            <p class="card-text">Get all the assistance you need to find the best residential properties.</p>
                           </div>
                         </div>
                       </div>
@@ -124,9 +121,9 @@
                       <div class="col-md-4">
                         <div class="card h-100 text-center">
                           <div class="card-body">
-                            <i class="bi bi-building fs-1 text-warning"></i>
-                            <h5 class="card-title">Commercial Property</h5>
-                            <p class="card-text">Matching local businesses with ideal premises.</p>
+                            <i class="bi bi-house fs-1 text-warning"></i>
+                            <h5 class="card-title">Down sizing clinic</h5>
+                            <p class="card-text">We have a pop in clinic where we provide consultancy to all potential clients looking to down size.</p>
                           </div>
                         </div>
                       </div>
@@ -134,9 +131,9 @@
                       <div class="col-md-4">
                         <div class="card h-100 text-center">
                           <div class="card-body">
-                            <i class="bi bi-map fs-1 text-warning"></i>
-                            <h5 class="card-title">Land Sales</h5>
-                            <p class="card-text">Supporting development with key land sites.</p>
+                            <i class="bi bi-calculator fs-1 text-warning"></i>
+                            <h5 class="card-title">First time buyers calculator</h5>
+                            <p class="card-text">Our online calculator shows all first time buyers their potential state supports.</p>
                           </div>
                         </div>
                       </div>
@@ -150,8 +147,8 @@
                         <div class="card h-100 text-center">
                           <div class="card-body">
                             <i class="bi bi-sun fs-1 text-warning"></i>
-                            <h5 class="card-title">Holiday Homes</h5>
-                            <p class="card-text">Seaside and scenic retreats for international buyers.</p>
+                            <h5 class="card-title">Holiday Homes Buyers support</h5>
+                            <p class="card-text">We specialise in finding the most scenic holiday homes in the market.</p>
                           </div>
                         </div>
                       </div>
@@ -160,8 +157,8 @@
                         <div class="card h-100 text-center">
                           <div class="card-body">
                             <i class="bi bi-currency-dollar fs-1 text-warning"></i>
-                            <h5 class="card-title">Investment Consulting</h5>
-                            <p class="card-text">Guiding investors through profitable opportunities.</p>
+                            <h5 class="card-title">Investment opportunites</h5>
+                            <p class="card-text">We are the best partner for identifying top property investment options in todays market.</p>
                           </div>
                         </div>
                       </div>
@@ -170,8 +167,8 @@
                         <div class="card h-100 text-center">
                           <div class="card-body">
                             <i class="bi bi-bar-chart-line-fill fs-1 text-warning"></i>
-                            <h5 class="card-title">Property Valuation</h5>
-                            <p class="card-text">Accurate and fair market assessments for sellers.</p>
+                            <h5 class="card-title">Start up Hub</h5>
+                            <p class="card-text"> We facilitate the commercial needs of local companies looking for commercial premises. </p>
                           </div>
                         </div>
                       </div>
@@ -180,7 +177,7 @@
           
                 </div>
           
-                <!-- Controls for the carousel  -->
+                <!-- Controls for the carousel sectoin also taken from  https://getbootstrap.com/docs/5.0/components/carousel/ -->
 
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
