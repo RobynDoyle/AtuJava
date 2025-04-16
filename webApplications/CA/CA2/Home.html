@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title>CA2 About Us Page</title>
+        <title>Home</title>
         <meta charset="utf-8">
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,6 +29,7 @@
         <!-- https://getbootstrap.com/docs/5.0/examples/navbars/ -->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
             <div class="container-fluid">
+                <i class="bi bi-house fs-1 text-warning me-2"></i>
               <a class="navbar-brand text-warning" href="Home.html">ROYLE Properties</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -76,25 +77,9 @@
       
 
 
-        <!-- header section perhaps with background image could go above or below the menu-->
-        <section class="m-0 p-0"> <!--I removed margins and padding on this section so my image would fill the space. If  -->
-            <!-- New section with background image and text overlay -->
-            <!-- <section>
-                <div class="bg-image">
-                    <div class="overlay">
-                        <div>
-                            <h1>Diamond Properties</h1>
-                            <p>Donegal's leading property and financial services advisors</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section> -->
+        
 
-        <!-- company image & intro text -->
-        <section>
-        <!--This container should have one row with two columns - one for the introductory text and one for the image- refer slide 23 and 24-->
-        </section>
+      
 
         
         <!-- This section is adapted from https://getbootstrap.com/docs/5.3/examples/carousel/ -->
@@ -161,20 +146,20 @@
               <div class="col-lg-4">
                 <img src="Assets/residential.png" alt="Residential" class="rounded-circle" style="width: 160px; height: 160px; object-fit: cover;">
                   <h2 class="fw-normal">Residential</h2>
-                <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                <p>Explore all of our listings in the Residential property sector. From Houses to Apartments, Condos to Holiday Homes, we got your next residential property listed here.</p>
+                <p><a class="btn btn-warning" href="#">Explore »</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-4">
                 <img src="Assets/commercial.jpg" alt="Commercial" class="rounded-circle" style="width: 160px; height: 160px; object-fit: cover;">
                 <h2 class="fw-normal">Commercial</h2>
-                <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                <p>All commerical properties viewable with a single click. From Offices and Warehouses, to Shops and Stores, take a browse through our wide range of offerings.</p>
+                <p><a class="btn btn-warning" href="#">Explore »</a></p>
               </div><!-- /.col-lg-4 -->
               <div class="col-lg-4">
-                <img src="Assets/fields.jpg" alt="Sites" class="rounded-circle" style="width: 160px; height: 160px; object-fit: cover;">
+                <img src="Assets/site3.jpg" alt="Sites" class="rounded-circle" style="width: 160px; height: 160px; object-fit: cover;">
                 <h2 class="fw-normal">Sites</h2>
-                <p>And lastly this, the third column of representative placeholder content.</p>
-                <p><a class="btn btn-secondary" href="#">View details »</a></p>
+                <p>We have an extensive set of Sites listed in this section. Whether you are looking to build a Home, Skyscraper, Amusement Park or Stadium, we have the site for you!</p>
+                <p><a class="btn btn-warning" href="#">Explore »</a></p>
               </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
         
@@ -186,7 +171,12 @@
             <div class="row featurette">
               <div class="col-md-7">
                 <h2 class="featurette-heading fw-normal lh-1">First time buyer? <span class="text-body-secondary">Check out this home!</span></h2>
-                <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+                <p class="lead">This stunning 1960's house on the edge of LA is the perfect place to call your first home. With a lovely back garden and generous facilites, it is truly a gem of a home. The local area has a school, hospital and shopping mall within walking distance. </p>
+                <div class="d-flex align-items-center mb-3">
+                    <a class="btn btn-warning me-3" href="#">View this property »</a>
+                    <h5 class="mb-0 fw-bold">Asking Price: $395,000</h5>
+                  </div>
+                <p><a class="btn btn-warning me-3" href="#">Browse for similiar »</a></p>
               </div>
               <div class="col-md-5">
                 <img src="Assets/firstTimeBuyer.jpg" class="d-block w-100 h-100 object-fit-cover" alt="First time buyer home">
@@ -198,7 +188,12 @@
             <div class="row featurette">
               <div class="col-md-7 order-md-2">
                 <h2 class="featurette-heading fw-normal lh-1">Thinking of down sizing? <span class="text-body-secondary">Look no further!</span></h2>
-                <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+                <p class="lead">Is it time to move into a more comfortable and easy to maintain home? Then this may be the home you were looking for. Situated in the heart of LA's natural beauty this modern and sleek property provides all the benefits of modern living and more!</p>
+                <div class="d-flex align-items-center mb-3">
+                    <a class="btn btn-warning me-3" href="#">View this property »</a>
+                    <h5 class="mb-0 fw-bold">Asking Price: $290,000</h5>
+                  </div>
+                <p><a class="btn btn-warning" href="#">Browse for similiar »</a></p>
               </div>
               <div class="col-md-5 order-md-1">
                 <img src="Assets/downsize.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Down sizing home">
@@ -211,6 +206,10 @@
               <div class="col-md-7">
                 <h2 class="featurette-heading fw-normal lh-1">Your next home?<span class="text-body-secondary"> Explore this property! </span></h2>
                 <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+                <div class="d-flex align-items-center mb-3">
+                    <a class="btn btn-warning me-3" href="#">View this property »</a>
+                    <h5 class="mb-0 fw-bold">Asking Price: $579,000</h5>
+                  </div>                <p><a class="btn btn-warning" href="#">Browse for similiar »</a></p>
               </div>
               <div class="col-md-5">
                 <img src="Assets/firstTIme2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Down sizing home">
@@ -288,7 +287,7 @@
               </div>
           
               <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center py-4 my-4 border-top">
-                <p class="mb-0">© 2025 Company, Inc. All rights reserved.</p>
+                <p class="mb-0">© 2025 ROYLE Properties Inc. All rights reserved.</p>
                 <ul class="list-unstyled d-flex mb-0">
                   <li>
                     <a class="text-dark fs-4 mx-2" href="#" aria-label="Instagram">

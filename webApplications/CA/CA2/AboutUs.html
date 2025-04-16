@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title>CA2 About Us Page</title>
+        <title>About Us</title>
         <meta charset="utf-8">
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,11 +28,12 @@
 
         <!--menu-->
        
-        <!--create a menu (code should be adapted from Bootstrap example files)-->
         <!-- navbar adapted from https://getbootstrap.com/docs/5.0/examples/navbars/ where i got the code by right clicking and selecting inspect and getitng the code -->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
             <div class="container-fluid">
+                <i class="bi bi-house fs-1 text-warning me-2"></i>
               <a class="navbar-brand text-warning" href="Home.html">ROYLE Properties</a>
+             
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -65,7 +66,7 @@
 
                 
 
-                <!-- Search bar -->
+                <!-- Search bar taken from the navbar examples https://getbootstrap.com/docs/5.0/examples/navbars/  -->
                 <form class="d-flex me-3">
                   <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                 </form>
@@ -79,6 +80,7 @@
             </div>
           </nav>
 
+          <!-- Company introduction section - Simple 2 column 1 row setup-->
           <section class="py-5">
             <div class="container">
               <div class="row align-items-center">
@@ -167,7 +169,7 @@
                         <div class="card h-100 text-center">
                           <div class="card-body">
                             <i class="bi bi-bar-chart-line-fill fs-1 text-warning"></i>
-                            <h5 class="card-title">Start up Hub</h5>
+                            <h5 class="card-title">Start-Up Property Hub</h5>
                             <p class="card-text"> We facilitate the commercial needs of local companies looking for commercial premises. </p>
                           </div>
                         </div>
@@ -187,13 +189,6 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>   
-                  
-                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button> -->
               </div>
             </div>
           </section>
@@ -201,38 +196,142 @@
       
 
 
-        <!-- header section perhaps with background image could go above or below the menu-->
-        <section class="m-0 p-0"> <!--I removed margins and padding on this section so my image would fill the space. If  -->
-            <!-- New section with background image and text overlay -->
-            <!-- <section>
-                <div class="bg-image">
-                    <div class="overlay">
-                        <div>
-                            <h1>Diamond Properties</h1>
-                            <p>Donegal's leading property and financial services advisors</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section> -->
+        
 
-        <!-- company image & intro text -->
-        <section>
-        <!--This container should have one row with two columns - one for the introductory text and one for the image- refer slide 23 and 24-->
-        </section>
 
 
                     
 
-        <!--services offered-->
-        <section> 
-        <!-- This container should outline the services that your company offers (6 services), you should use cards set out in columns, a grid or a carousel - see notes -->
-        </section>
-
-        <!-- our team -->
+       
+        <!-- our team  cards adapted from https://getbootstrap.com/docs/5.3/examples/features/ -->
         <section>
         <!-- This container will store info on your staff. The team should have at least 4 members. I used and adapted Bootstrap Brain Component - see notes-->
-        </section>
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+              <div class="card card-cover h-200 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('Assets/staff1.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-warning text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Micheal Johnson</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                        <i class="bi bi-house fs-1 text-warning"></i>                    </li>
+                    <li class="d-flex align-items-center me-3">
+                        <small>CEO</small>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <small>Joined in 2022</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col">
+              <div class="card card-cover h-200 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('Assets/staff3.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-warning text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Tammy Green</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                        <i class="bi bi-house fs-1 text-warning"></i>                     </li>
+                    <li class="d-flex align-items-center me-3">
+                      <svg class="bi me-2" width="1em" height="1em" role="img" aria-label="Location"><use xlink:href="#geo-fill"></use></svg>
+                      <small>Deputy CEO</small>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <svg class="bi me-2" width="1em" height="1em" role="img" aria-label="Duration"><use xlink:href="#calendar3"></use></svg>
+                      <small>Joined in 2023</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col">
+              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                        <i class="bi bi-house fs-1 text-warning"></i>                     </li>
+                    <li class="d-flex align-items-center me-3">
+                      <svg class="bi me-2" width="1em" height="1em" role="img" aria-label="Location"><use xlink:href="#geo-fill"></use></svg>
+                      <small>California</small>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <svg class="bi me-2" width="1em" height="1em" role="img" aria-label="Duration"><use xlink:href="#calendar3"></use></svg>
+                      <small>5d</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                        <i class="bi bi-house fs-1 text-warning"></i>                     </li>
+                    <li class="d-flex align-items-center me-3">
+                      <svg class="bi me-2" width="1em" height="1em" role="img" aria-label="Location"><use xlink:href="#geo-fill"></use></svg>
+                      <small>Earth</small>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <svg class="bi me-2" width="1em" height="1em" role="img" aria-label="Duration"><use xlink:href="#calendar3"></use></svg>
+                      <small>3d</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col">
+              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                        <i class="bi bi-house fs-1 text-warning"></i>                     </li>
+                    <li class="d-flex align-items-center me-3">
+                      <svg class="bi me-2" width="1em" height="1em" role="img" aria-label="Location"><use xlink:href="#geo-fill"></use></svg>
+                      <small>Pakistan</small>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <svg class="bi me-2" width="1em" height="1em" role="img" aria-label="Duration"><use xlink:href="#calendar3"></use></svg>
+                      <small>4d</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col">
+              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                        <i class="bi bi-house fs-1 text-warning"></i>                     </li>
+                    <li class="d-flex align-items-center me-3">
+                      <svg class="bi me-2" width="1em" height="1em" role="img" aria-label="Location"><use xlink:href="#geo-fill"></use></svg>
+                      <small>California</small>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <svg class="bi me-2" width="1em" height="1em" role="img" aria-label="Duration"><use xlink:href="#calendar3"></use></svg>
+                      <small>5d</small>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+    </section>
+
+    
 
         <!-- contact form -->
         <section>
@@ -342,7 +441,7 @@
               </div>
           
               <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center py-4 my-4 border-top">
-                <p class="mb-0">© 2025 Company, Inc. All rights reserved.</p>
+                <p class="mb-0">© 2025 ROYLE Properties Inc. All rights reserved.</p>
                 <ul class="list-unstyled d-flex mb-0">
                   <li>
                     <a class="text-dark fs-4 mx-2" href="#" aria-label="Instagram">
