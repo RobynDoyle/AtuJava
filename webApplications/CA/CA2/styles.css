@@ -1,24 +1,4 @@
-CSS
-.bg-image {
-            position: relative;
-            background-image: url('property.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 300px;
-            color: white;
-        }
-.bg-image .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(169, 197, 216, 0.5); /* Adjust the opacity as needed */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+
 .bg-image .overlay h1 {
             font-size: 3rem;
             font-weight: bold;
@@ -65,5 +45,17 @@ right: -3rem;
   #myCarousel .carousel-item {
     height: 32rem;
   }
+/* setting up the size and behaviour of the cards (especially noticable on smaller screen sizes) */
+  .card-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  
 
 
