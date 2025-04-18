@@ -60,20 +60,20 @@
                     <a class="nav-link active" aria-current="page" href="AboutUs.html">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="Contact.html">Contact</a>
                   </li>
                 </ul>
 
                 
 
                 <!-- Search bar taken from the navbar examples https://getbootstrap.com/docs/5.0/examples/navbars/  -->
-                <form class="d-flex me-3">
+                <form class="d-none d-lg-flex me-3">
                   <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                 </form>
 
-                <!-- buttons taken from headers example at https://getbootstrap.com/docs/5.3/examples/headers/# -->
-                  <div class="text-end">
-                    <button type="button" class="btn btn-outline-light me-2">Login</button>
+                <!-- buttons adapted from headers example at https://getbootstrap.com/docs/5.3/examples/headers/#  original version did not flow well in smaller viewports, so edits were needed-->
+                <div class="d-flex flex-column flex-md-row gap-2 ms-ms-3">
+                    <button type="button" class="btn btn-outline-light">Login</button>
                     <button type="button" class="btn btn-warning">Sign-up</button>
                   </div>
               </div>
@@ -405,7 +405,7 @@
                 
                 <!-- Submit button -->
                 <div class="text-center">  
-                <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4 w-100">Send</button>
+                <button data-mdb-ripple-init type="button" class="btn btn-warning btn-block mb-4 w-100">Send</button>
                 </div>
                 </form>
             </div>
@@ -421,7 +421,7 @@
             <footer class="py-5 ">
               <div class="row">
                 <div class="col-6 col-md-2 mb-3">
-                  <h5>Residential</h5>
+                    <h5 class="text-warning">Residential</h5>
                   <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Top picks</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Search</a></li>
@@ -432,7 +432,7 @@
                 </div>
           
                 <div class="col-6 col-md-2 mb-3">
-                  <h5>Commercial</h5>
+                    <h5 class="text-warning">Commercial</h5>
                   <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Top picks</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Search</a></li>
@@ -443,7 +443,7 @@
                 </div>
           
                 <div class="col-6 col-md-2 mb-3">
-                  <h5>Sites</h5>
+                    <h5 class="text-warning">Sites</h5>
                   <ul class="nav flex-column">
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Top Picks</a></li>
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Search</a></li>
@@ -455,12 +455,12 @@
           
                 <div class="col-md-5 offset-md-1 mb-3">
                   <form>
-                    <h5>Subscribe to our newsletter</h5>
+                    <h5 class="text-warning">Subscribe to our newsletter</h5>
                     <p>Monthly catelogue of the newest properties. Get tips for your property search from our experts.</p>
                     <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                       <label for="newsletter1" class="visually-hidden">Email address</label>
                       <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
-                      <button class="btn btn-primary" type="button">Subscribe</button>
+                      <button class="btn btn-warning" type="button">Subscribe</button>
                     </div>
                   </form>
                 </div>
