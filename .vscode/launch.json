@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "testZero",
+            "request": "launch",
+            "mainClass": "gui.ExceptionHandling.testZero",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "testZero",
+            "request": "launch",
+            "mainClass": "testZero",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
             "name": "FirstGui",
             "request": "launch",
             "mainClass": "gui.FirstGui",
