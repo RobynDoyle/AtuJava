@@ -1,0 +1,83 @@
+/* Robyn Doyle L00188328 */
+.bg-image .overlay h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+.bg-image .overlay p {
+            font-size: 1.5rem;
+        }
+
+/* makes the menu items gold on hover  */
+.nav-link:hover {
+            color: #ffc107; 
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+/* setting the indicator icons to be visible */
+#carouselExampleIndicators .carousel-control-prev,
+#carouselExampleIndicators .carousel-control-next {
+width: 5%;
+}
+
+#carouselExampleIndicators .carousel-control-prev {
+left: -3rem;
+}
+
+#carouselExampleIndicators .carousel-control-next {
+right: -3rem;
+}
+          
+         
+/* CUSTOMIZE THE CAROUSEL code adapted from https://getbootstrap.com/docs/5.3/examples/carousel/carousel.css
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  #myCarousel .carousel-item {
+    height: 32rem;
+  }
+/* setting up the size and behaviour of the cards (especially noticable on smaller screen sizes) */
+  .card-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  /* forces Listings button to selected when active */
+.nav-link.active.dropdown-toggle {
+  color: white !important;
+}
+
+  
+
+
+footer a {text-decoration: none;}
+.feedback { /* used for pages with little content to push footer down */
+    min-height: 450px; 
+  }
+
+.card-body {
+    padding: 10px !important; /* Adjust padding within card body */
+}
+
+.card-footer {
+    padding: 10px !important; /* Adjust padding within card footer */
+}
+
+  /* forces Listings button to selected when active */
+  .nav-link.active.dropdown-toggle {
+    color: white !important;
+  }

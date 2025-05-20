@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FileReader",
+            "request": "launch",
+            "mainClass": "java2.InOut.FileReader",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "FileTesterIO",
+            "request": "launch",
+            "mainClass": "java2.InOut.FileTesterIO",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "java2.week1.wk2.test",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "FileTestTwo",
+            "request": "launch",
+            "mainClass": "gui.FileTestTwo",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "FileTest",
+            "request": "launch",
+            "mainClass": "gui.FileTest",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
             "name": "testZero",
             "request": "launch",
             "mainClass": "gui.ExceptionHandling.testZero",
