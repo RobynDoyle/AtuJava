@@ -1,0 +1,28 @@
+schema
+
+TIBCO Business Works
+Tibco EBX
+
+API calls POST GET DELETE 
+
+LEANIX - graphql api syntax REST
+EBX 
+
+{ query "query" :"  '"/"Robyn"/"'  "}
+
+REST
+Graphql
+
+DataContract
+ - ID
+ - Name
+ - Detials etc
+    - Producer
+      - ApplicaitonFactsheetID
+      
+        
+ ns14{"- "ID" : "123"} ns14{"- "ID" : "123"} ns14{"- "ID" : "123"} ns14{"- "ID" : "123"} ns14{"- "ID" : "123"}(concat(on iD match name where name = name in other list of data)
+ - Name
+ - Detials etc
+    - Producer
+      - ApplicaitonFactsheetID

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ReadCarFile",
+            "request": "launch",
+            "mainClass": "java2.InOut.ReadCarFile",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
+            "name": "CarFile",
+            "request": "launch",
+            "mainClass": "java2.InOut.CarFile",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
             "name": "FileReader",
             "request": "launch",
             "mainClass": "java2.InOut.FileReader",
