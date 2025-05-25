@@ -18,10 +18,10 @@ public class HolidayManager {
 
         do {
 
-            System.out.println("\nWelcome to the Start Menu!\n\nDo you wish to write new holiday data or use data already on file?\n");
+            System.out.println("**************************************************************************\nWelcome to the Start Menu!\nDo you wish to write new holiday data or use data already on file?");
             System.out.println("1: Write new holiday data to file");
             System.out.println("2: Use sample holiday data already on file");
-            System.out.println("0. Exit\n");
+            System.out.println("0. Exit");
             System.out.print("Input:");
             choiceMenu1 = keyboardIn.nextInt(); // gets user input.
 
@@ -39,7 +39,7 @@ public class HolidayManager {
                     System.out.println("Goodbye!");
                     break;
                 default:
-                    System.out.println("Please select 1, 2, or 0 to try again.");
+                    System.out.println("**************************************************************************\nINVALID INPUT! Please select 1, 2, or 0 to try again.");
             }
 
 
@@ -86,18 +86,44 @@ public class HolidayManager {
     } // close addHoliday method
 
     public static void holidayMenu(Scanner keyboardIn) throws IOException {
-        int choiceMenu2;
-        do {
-            System.out.println("Holiday Menu\n");
+        int choiceMenu2; //initialise choise var
+
+        // menu print
+        do { 
+            System.out.println("**************************************************************************\nHoliday Menu");
             System.out.println("1. View all holidays ");
             System.out.println("2. View holiday(s) within a given price range ");
             System.out.println("3. Display details of the cheapest holiday ");
-            System.out.println("4. Remove a holiday ");
+            System.out.println("4. Remove a holiday");
             System.out.println("5. Update holiday details ");
-            System.out.println("0. Exit\n ");
+            System.out.println("0. Exit ");
             System.out.print("Input:");
-            choiceMenu2 = keyboardIn.nextInt();
-        } while (choiceMenu2 != 0 && choiceMenu2 != 1 && choiceMenu2 != 2 && choiceMenu2 != 3 && choiceMenu2 != 4 && choiceMenu2 != 5);
+            choiceMenu2 = keyboardIn.nextInt(); // takes user input
+            
+            // user choice gets assigned to method to be executed.
+            switch (choiceMenu2) {
+                case 1:
+                    System.out.println("**************************************************************************\nView all holidays");
+                    break;
+                case 2:
+                    System.out.println("**************************************************************************\nView holiday(s) within a given price range ");
+                    break;
+                case 3:
+                    System.out.println("**************************************************************************\nDisplay details of the cheapest holiday");
+                    break;
+                case 4:
+                    System.out.println("**************************************************************************\nRemove a holiday");
+                    break;
+                case 5:
+                    System.out.println("**************************************************************************\nUpdate holiday details");
+                    break;
+                case 0:
+                    System.out.println("**************************************************************************\nReturning to Start Menu");
+                    break;
+                default:
+                    System.out.println("**************************************************************************\nINVALID INPUT! Please select 1, 2, 3, 4, 5 or 0 to try again.");
+            }
+        } while (choiceMenu2 != 0);//&& choiceMenu2 != 1 && choiceMenu2 != 2 && choiceMenu2 != 3 && choiceMenu2 != 4 && choiceMenu2 != 5);
            
         
     } // close holidayMenu method
