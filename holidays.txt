@@ -1,2 +1,1 @@
-Holiday No: 1	 Destination: france	 Departure Airport: spain	 Duration: 5	 Cost: 22000.0
-Holiday No: 2	 Destination: turkey	 Departure Airport: ireland	 Duration: 2	 Cost: 33000.0
+Holiday No: 1	 Destination: r	 Departure Airport: t	 Duration: 4	 Cost: 5.0
