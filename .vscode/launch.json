@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HolidayManager",
+            "request": "launch",
+            "mainClass": "HolidayManager",
+            "projectName": "AtuJava_c5afe04d"
+        },
+        {
+            "type": "java",
             "name": "ReadCarFile",
             "request": "launch",
             "mainClass": "java2.InOut.ReadCarFile",
