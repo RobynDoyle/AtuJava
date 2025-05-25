@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class HolidayManager {
@@ -63,9 +65,23 @@ public class HolidayManager {
              destinationIn = keyboardIn.next();
              System.out.println("Enter Departure Airport:");
              deptAirportIn = keyboardIn.next();
+
+
              System.out.println("Enter Total Cost of Holiday:");
+             // check to ensure program does not crash if wrong data type is entered
+             while (!keyboardIn.hasNextDouble()){
+                System.out.println("INALID INPUT: Enter a data type compatible with Double: ");
+                keyboardIn.next(); // moves on 
+             }
              costIn = keyboardIn.nextDouble();
+
+
              System.out.println("Enter Duration (Days):");
+             // check to ensure program does not crash if wrong data type is entered
+             while (!keyboardIn.hasNextInt()){
+                System.out.println("INALID INPUT: Enter a data type compatible with Integer: ");
+                keyboardIn.next(); // moves on 
+             }
              durationIn = keyboardIn.nextInt();
              
              // Create a holiday object with given data
@@ -87,6 +103,7 @@ public class HolidayManager {
 
     public static void holidayMenu(Scanner keyboardIn) throws IOException {
         int choiceMenu2; //initialise choise var
+        List<String> listHoliday =  loadHolidayRecords(); // Load the data from the file as a List
 
         // menu print
         do { 
@@ -99,11 +116,14 @@ public class HolidayManager {
             System.out.println("0. Exit ");
             System.out.print("Input:");
             choiceMenu2 = keyboardIn.nextInt(); // takes user input
+
+           
             
             // user choice gets assigned to method to be executed.
             switch (choiceMenu2) {
                 case 1:
                     System.out.println("**************************************************************************\nView all holidays");
+                    viewAllHolidays(listHoliday);
                     break;
                 case 2:
                     System.out.println("**************************************************************************\nView holiday(s) within a given price range ");
@@ -127,5 +147,51 @@ public class HolidayManager {
            
         
     } // close holidayMenu method
+
+
+    // a method that loads the data from the File once, so we dont need to keep opening the file. it returns a List object.
+    public static List<String> loadHolidayRecords() throws IOException {
+        List<String> listHoliday = new ArrayList<>(); // create the Array List object to hold the data.
+        File readHolidayFile = new File("holidays.txt"); // we read the holiday file
+
+        // check if the file reader found the file and connected.
+        if(!readHolidayFile.exists()){
+            System.out.println("File connection unsuccessful. Double check that the file is in correct directory");
+        }
+        // sets up the scanner to take the input from the file.
+        Scanner input = new Scanner(readHolidayFile);
+
+      
+
+        // iterate through the file and append each line to the Array List
+        while (input.hasNextLine()) {
+            listHoliday.add(input.nextLine());
+        }
+
+          // check if th Array List has less then 0 entries. if true then the file is empty. 
+          if (listHoliday.isEmpty()){
+            System.out.println("File is empty, try adding some data first via the Start Menu");
+        }
+
+        input.close(); // close the input scanner object
+
+        return listHoliday; // return the List object so we can use it in other methods. 
+
+
+
+
+        
+
+        
+    }
+
+    public static void viewAllHolidays(List<String> listHoliday) throws IOException
+    {
+        for (String holidayRecord : listHoliday) {
+            System.out.println(holidayRecord);
+        }
+
+        
+    };
 
 }//close class
