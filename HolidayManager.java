@@ -1,3 +1,6 @@
+/*Assessment 2 Holiday Manager program
+Student: Robyn Doyle
+Student Number: L00188328 */
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -103,17 +106,17 @@ public class HolidayManager {
 
     public static void holidayMenu(Scanner keyboardIn) throws IOException {
         int choiceMenu2; //initialise choise var
-        List<String> listHoliday =  loadHolidayRecords(); // Load the data from the file as a List
+        List<Holiday> listHoliday =  loadHolidayRecords(); // Load the data from the file as a List of Holiday Objects
 
         // menu print
         do { 
             System.out.println("**************************************************************************\nHoliday Menu");
-            System.out.println("1. View all holidays ");
-            System.out.println("2. View holiday(s) within a given price range ");
-            System.out.println("3. Display details of the cheapest holiday ");
+            System.out.println("1. View all holidays");
+            System.out.println("2. View holiday(s) within a given price range");
+            System.out.println("3. Display details of the cheapest holiday");
             System.out.println("4. Remove a holiday");
-            System.out.println("5. Update holiday details ");
-            System.out.println("0. Exit ");
+            System.out.println("5. Update holiday details");
+            System.out.println("0. Exit to Start Menu");
             System.out.print("Input:");
             choiceMenu2 = keyboardIn.nextInt(); // takes user input
 
@@ -127,6 +130,7 @@ public class HolidayManager {
                     break;
                 case 2:
                     System.out.println("**************************************************************************\nView holiday(s) within a given price range ");
+                    viewHolidaysInRange(listHoliday, keyboardIn);
                     break;
                 case 3:
                     System.out.println("**************************************************************************\nDisplay details of the cheapest holiday");
@@ -150,8 +154,8 @@ public class HolidayManager {
 
 
     // a method that loads the data from the File once, so we dont need to keep opening the file. it returns a List object.
-    public static List<String> loadHolidayRecords() throws IOException {
-        List<String> listHoliday = new ArrayList<>(); // create the Array List object to hold the data.
+    public static List<Holiday> loadHolidayRecords() throws IOException {
+        List<Holiday> listHoliday = new ArrayList<>(); // create the Array List object to hold the data.
         File readHolidayFile = new File("holidays.txt"); // we read the holiday file
 
         // check if the file reader found the file and connected.
@@ -163,9 +167,15 @@ public class HolidayManager {
 
       
 
-        // iterate through the file and append each line to the Array List
+        // iterate through the file and append each line to the Array Holiday Object List
         while (input.hasNextLine()) {
-            listHoliday.add(input.nextLine());
+            String line = input.nextLine();
+            try {
+                Holiday holiday = Holiday.makeString(line);
+                listHoliday.add(holiday);
+            } catch (Exception e) {
+                System.out.println("Issue in File");
+            }
         }
 
           // check if th Array List has less then 0 entries. if true then the file is empty. 
@@ -175,23 +185,43 @@ public class HolidayManager {
 
         input.close(); // close the input scanner object
 
-        return listHoliday; // return the List object so we can use it in other methods. 
-
-
-
-
-        
-
-        
+        return listHoliday; // return the List object so we can use it in other methods.    
     }
 
-    public static void viewAllHolidays(List<String> listHoliday) throws IOException
-    {
-        for (String holidayRecord : listHoliday) {
-            System.out.println(holidayRecord);
+    public static void viewAllHolidays(List<Holiday> listHoliday) throws IOException{
+     
+        // check if list and therefore file is empty
+        if (listHoliday.isEmpty()) {
+            System.out.println("No holiday records on file");
+        }
+        else {   // loop through the records in the Holiday List
+            for (Holiday holidayRecord : listHoliday) {
+                System.out.println(holidayRecord);
+            }  
+        }
+        
+    } // close method
+
+    public static void viewHolidaysInRange(List<Holiday> listHoliday, Scanner keyboardIn) throws IOException {
+        if (listHoliday.isEmpty()) {  // check if list and therefore file is empty
+            System.out.println("No holiday records on file");
+        }
+        else {
+            System.out.println("Enter price range lower limit: ");
+            double lowerLimit = keyboardIn.nextDouble();
+            System.out.println("Enter price range upper limit: ");
+            double upperLimit = keyboardIn.nextDouble();
+
+            for (Holiday holidayRecord : listHoliday) {
+                if (holidayRecord.getCost() > lowerLimit && holidayRecord.getCost() < upperLimit){
+                    System.out.println(holidayRecord);
+                }
+                
+                
+            }  
         }
 
-        
-    };
+    }
+    
 
 }//close class
