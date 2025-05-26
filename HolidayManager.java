@@ -134,6 +134,7 @@ public class HolidayManager {
                     break;
                 case 3:
                     System.out.println("**************************************************************************\nDisplay details of the cheapest holiday");
+                    viewHolidaysCheapest(listHoliday, keyboardIn);
                     break;
                 case 4:
                     System.out.println("**************************************************************************\nRemove a holiday");
@@ -178,7 +179,7 @@ public class HolidayManager {
             }
         }
 
-          // check if th Array List has less then 0 entries. if true then the file is empty. 
+          // check if the Array List has less then 0 entries. if true then the file is empty. 
           if (listHoliday.isEmpty()){
             System.out.println("File is empty, try adding some data first via the Start Menu");
         }
@@ -206,14 +207,15 @@ public class HolidayManager {
         if (listHoliday.isEmpty()) {  // check if list and therefore file is empty
             System.out.println("No holiday records on file");
         }
-        else {
+        else { // asks user for input to set price range.
             System.out.println("Enter price range lower limit: ");
             double lowerLimit = keyboardIn.nextDouble();
             System.out.println("Enter price range upper limit: ");
             double upperLimit = keyboardIn.nextDouble();
 
+            // if price is in range then print to screen the holiday objects from the list.
             for (Holiday holidayRecord : listHoliday) {
-                if (holidayRecord.getCost() > lowerLimit && holidayRecord.getCost() < upperLimit){
+                if (holidayRecord.getCost() >= lowerLimit && holidayRecord.getCost() <= upperLimit){
                     System.out.println(holidayRecord);
                 }
                 
@@ -221,7 +223,34 @@ public class HolidayManager {
             }  
         }
 
-    }
-    
+    }// close range method
+
+
+    public static void viewHolidaysCheapest(List<Holiday> listHoliday, Scanner keyboardIn) throws IOException {
+        if (listHoliday.isEmpty()) {  // check if list and therefore file is empty
+            System.out.println("No holiday records on file");
+        }
+        else { double cheapestCost = Double.MAX_VALUE; // set the highest possible number in case we did have super expensive holidays. 
+            int cheapestID = 0; 
+
+
+            // if price of holiday object is higher then current cheapest variable then assign it.
+            for (Holiday holidayRecord : listHoliday) {
+                if (holidayRecord.getCost() < cheapestCost){
+                    cheapestID = holidayRecord.getHolidayNo();
+                    cheapestCost = holidayRecord.getCost();
+                }
+            }
+            System.out.println("This is the cheapest holiday on File");
+
+            for (Holiday holidayRecordTwo : listHoliday) {
+                if (holidayRecordTwo.getHolidayNo() == cheapestID){
+                    System.out.println(holidayRecordTwo.toString());
+                }
+              
+            }  
+        }
+
+    }// close cheapest method
 
 }//close class
