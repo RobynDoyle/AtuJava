@@ -1,0 +1,38 @@
+Assessment 2 Holiday Manager program
+1. Student: Robyn Doyle
+   Student Number: L00188328 
+
+***************************************************
+
+2. A brief summary of your program and menu options
+
+***************************************************
+
+3.  A description of how you handled file input/output
+
+***************************************************
+
+4. A short personal reflection including:
+     - The most challenging part of the assignment
+     - One improvement you would make with more time
+
+Better error handling. 
+
+***************************************************
+
+5. Reflection Prompt - Save on Exit vs Autosave
+
+NOTE: Your program is currently expected to save all changes only when the user selects Exit (option 0), following the pattern taught in lectures.
+    If you were to change the program to save immediately after each add, update, or remove operation (autosave), what would be the main advantages and disadvantages of this approach?
+
+Answer:
+
+
+Advantages. If the program crashes, we would have some of our work saved.
+
+Disadvantages: 
+    1. If we use autosave we would write to the file many times. This costs more resources.
+    2. We would need more lines of code. 
+***************************************************
+
+6. Confirmation of the elements in the menu structure that you managed to complete (e.g.   - View all holidays,  - Filter by price range  - Show cheapest holiday,  - Remove holiday,  - Update holiday ) Please clearly indicate this in your README file

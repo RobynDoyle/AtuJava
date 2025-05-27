@@ -22,13 +22,16 @@ public class HolidayManager {
         
         int choiceMenu1 = 10; // initialise var
 
-        do {
+        
+        
 
+        do {
             System.out.println("**************************************************************************\nWelcome to the Start Menu!\nDo you wish to write new holiday data or use data already on file?");
             System.out.println("1: Write new holiday data to file");
             System.out.println("2: Use sample holiday data already on file");
-            System.out.println("0. Exit");
+            System.out.println("0. Exit (and Save)");
             System.out.print("Input:");
+            
             
             try { choiceMenu1 = keyboardIn.nextInt(); // gets user input.
             } catch (InputMismatchException ex) {
@@ -50,6 +53,7 @@ public class HolidayManager {
                     break;
                 case 0: 
                     System.out.println("Goodbye!");
+                    // update the File. 
                     break;
                 default:
                     System.out.println("**************************************************************************\nINVALID INPUT! Please select 1, 2, or 0 to try again.");
@@ -98,7 +102,7 @@ public class HolidayManager {
              // Create a holiday object with given data
              Holiday holidayObject = new Holiday(destinationIn, deptAirportIn, durationIn, costIn);
  
-             pw.println(holidayObject.toString());  // print data to file
+             pw.println(holidayObject.getHolidayNo() + "," + holidayObject.getDestination() + "," + holidayObject.getDepartureAirport() + "," + holidayObject.getDuration() + "," + holidayObject.getCost());  // print data to file
  
              System.out.print("Would you like to add another holiday (Y/N): "); // Asks user if the want to exit or continue
              ans = keyboardIn.next().charAt(0);
@@ -117,6 +121,8 @@ public class HolidayManager {
         List<Holiday> listHoliday =  loadHolidayRecords(); // Load the data from the file as a List of Holiday Objects
 
         // menu print
+        
+        
         do { 
             System.out.println("**************************************************************************\nHoliday Menu");
             System.out.println("1. View all holidays");
@@ -154,7 +160,7 @@ public class HolidayManager {
                     break;
                 case 4:
                     System.out.println("**************************************************************************\nRemove a holiday");
-                    removeHoliday();
+                    removeHoliday(listHoliday, keyboardIn);
                     break;
                 case 5:
                     System.out.println("**************************************************************************\nUpdate holiday details");
@@ -182,19 +188,24 @@ public class HolidayManager {
         }
         // sets up the scanner to take the input from the file.
         Scanner input = new Scanner(readHolidayFile);
-
-      
-
+        input.useDelimiter("[,\n]"); // allows us to parse the holidays.txt entries via comma
         // iterate through the file and append each line to the Array Holiday Object List
-        while (input.hasNextLine()) {
-            String line = input.nextLine();
+        while (input.hasNext()){
+            
             try {
-                Holiday holiday = Holiday.makeString(line);
-                listHoliday.add(holiday);
-            } catch (Exception e) {
-                System.out.println("Issue in File");
+            int ID = input.nextInt();
+            String destination = input.next();
+            String deptAirport = input.next();
+            int duration = input.nextInt();
+            double cost = input.nextDouble();
+
+            Holiday holiday = new Holiday(ID, destination, deptAirport, duration, cost);
+            listHoliday.add(holiday);
+            } catch  (Exception e) {
+                System.out.println("Issue in File"); // prints if there is an issue in the source data. 
             }
         }
+    
 
           // check if the Array List has less then 0 entries. if true then the file is empty. 
           if (listHoliday.isEmpty()){
@@ -269,8 +280,35 @@ public class HolidayManager {
 
     }// close cheapest method
 
-    public static void removeHoliday() {
-        System.out.println("bob");
-    }
+    public static void removeHoliday(List<Holiday> listHoliday, Scanner keyboardIn) {
+        System.out.println("Enter ID of Holiday record to be removed: ");
+        int removeHolidayID;
+        removeHolidayID = keyboardIn.nextInt();
+        int checkIfRemove = 0; // this will be get changed if a holiday is in fact deleted.
+
+        for (int i = 0; i < listHoliday.size(); i++) {
+            if (listHoliday.get(i).getHolidayNo() == removeHolidayID) {
+                // remove the holiday when found
+                listHoliday.remove(i);
+                
+                System.out.println("The following Holiday was removed from List.");
+                System.out.println(listHoliday.get(i));
+                checkIfRemove = i; // sets the check variable to let us know something was deleted
+            } 
+            
+            
+        }
+        // prints to screen in the event that no holiday could be found. 
+        if (checkIfRemove == 0){
+            System.out.println("No holiday exists with the ID " + removeHolidayID);
+        }
+
+        
+
+
+        
+
+        
+    } // close remove holiday method
 
 }//close class

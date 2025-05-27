@@ -35,7 +35,7 @@ public class Holiday
       cost = costIn;
    }
    
-   //Constructor 3 - For reading lines from FIle and replicating the holiday objects.
+   //Constructor 3 - For reading lines from FIle and replicating the holiday objects with ID.
    public Holiday(int IDIn, String destinationIn, String deptAirportIn, int durationIn, double costIn)
    {
       holidayNo = IDIn; // this ID passing could lead to having the duplicate ID's present if the file is manipulated or set up wrong. 
@@ -98,15 +98,5 @@ public class Holiday
              "\t Cost: " +cost;
    }
 
-   // this method allows us to convert the file data in a list of Holiday Objects. 
-   public static Holiday makeString(String line) {
-      String[] parts = line.split(","); // this splits the line using the comma as a delimiter   
-      int ID = Integer.parseInt(parts[0].trim()); // parses the ID.  parsing for type int
-      String destination = parts[1].trim();//  parsing for type string
-      String deptAirport = parts[2].trim();
-      int duration = Integer.parseInt(parts[3].trim()); // parsing for type int
-      double cost = Double.parseDouble(parts[4].trim()); //parsing for type double
-  
-      return new Holiday(ID, destination, deptAirport, duration, cost); // sends the variables into the constuctor. 
-  } // close makeString metho
+
 }//close Holiday class
