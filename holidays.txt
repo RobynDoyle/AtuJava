@@ -1,4 +1,4 @@
-1,Paris,CDG,5,899.99
+1,Paris,CDG,5,199.99
 2,New York,JFK,3,1133.84
 3,Barcelona,BCN,11,1581.24
 4,Dubai,DXB,14,1201.26

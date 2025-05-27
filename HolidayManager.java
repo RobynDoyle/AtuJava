@@ -3,6 +3,7 @@ Student: Robyn Doyle
 Student Number: L00188328 */
 import java.io.*;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class HolidayManager {
     public static void startMenu(Scanner keyboardIn) throws IOException
     { 
         
-        int choiceMenu1; // initialise var
+        int choiceMenu1 = 10; // initialise var
 
         do {
 
@@ -28,7 +29,14 @@ public class HolidayManager {
             System.out.println("2: Use sample holiday data already on file");
             System.out.println("0. Exit");
             System.out.print("Input:");
-            choiceMenu1 = keyboardIn.nextInt(); // gets user input.
+            
+            try { choiceMenu1 = keyboardIn.nextInt(); // gets user input.
+            } catch (InputMismatchException ex) {
+                System.out.println("Please enter a valid number.");
+                keyboardIn.nextLine(); // clears the bad input that we dont want, like flushing
+                continue; 
+            }
+
 
             switch (choiceMenu1) {
                 case 1: // here we enter new data into the holidays.txt file
@@ -105,7 +113,7 @@ public class HolidayManager {
     } // close addHoliday method
 
     public static void holidayMenu(Scanner keyboardIn) throws IOException {
-        int choiceMenu2; //initialise choise var
+        int choiceMenu2 = 10; //initialise choice var
         List<Holiday> listHoliday =  loadHolidayRecords(); // Load the data from the file as a List of Holiday Objects
 
         // menu print
@@ -118,7 +126,15 @@ public class HolidayManager {
             System.out.println("5. Update holiday details");
             System.out.println("0. Exit to Start Menu");
             System.out.print("Input:");
-            choiceMenu2 = keyboardIn.nextInt(); // takes user input
+            
+            
+            try{
+                choiceMenu2 = keyboardIn.nextInt(); // takes user input
+            } catch (InputMismatchException ex) {
+                System.out.println("Please enter a valid number.");
+                keyboardIn.nextLine(); // clears the bad input that we dont want, like flushing
+                continue; 
+            }
 
            
             
@@ -138,6 +154,7 @@ public class HolidayManager {
                     break;
                 case 4:
                     System.out.println("**************************************************************************\nRemove a holiday");
+                    removeHoliday();
                     break;
                 case 5:
                     System.out.println("**************************************************************************\nUpdate holiday details");
@@ -189,7 +206,7 @@ public class HolidayManager {
         return listHoliday; // return the List object so we can use it in other methods.    
     }
 
-    public static void viewAllHolidays(List<Holiday> listHoliday) throws IOException{
+    public static void viewAllHolidays(List<Holiday> listHoliday) {
      
         // check if list and therefore file is empty
         if (listHoliday.isEmpty()) {
@@ -203,7 +220,7 @@ public class HolidayManager {
         
     } // close method
 
-    public static void viewHolidaysInRange(List<Holiday> listHoliday, Scanner keyboardIn) throws IOException {
+    public static void viewHolidaysInRange(List<Holiday> listHoliday, Scanner keyboardIn) {
         if (listHoliday.isEmpty()) {  // check if list and therefore file is empty
             System.out.println("No holiday records on file");
         }
@@ -226,31 +243,34 @@ public class HolidayManager {
     }// close range method
 
 
-    public static void viewHolidaysCheapest(List<Holiday> listHoliday, Scanner keyboardIn) throws IOException {
+    public static void viewHolidaysCheapest(List<Holiday> listHoliday, Scanner keyboardIn) {
         if (listHoliday.isEmpty()) {  // check if list and therefore file is empty
             System.out.println("No holiday records on file");
         }
-        else { double cheapestCost = Double.MAX_VALUE; // set the highest possible number in case we did have super expensive holidays. 
-            int cheapestID = 0; 
+        else { 
+            
+            Holiday cheapestHoliday = listHoliday.get(0); // we assign the first holiday on file and the compare against the others
 
 
             // if price of holiday object is higher then current cheapest variable then assign it.
             for (Holiday holidayRecord : listHoliday) {
-                if (holidayRecord.getCost() < cheapestCost){
-                    cheapestID = holidayRecord.getHolidayNo();
-                    cheapestCost = holidayRecord.getCost();
+                if (holidayRecord.getCost() < cheapestHoliday.getCost()){
+                    cheapestHoliday = holidayRecord;
                 }
             }
             System.out.println("This is the cheapest holiday on File");
 
-            for (Holiday holidayRecordTwo : listHoliday) {
-                if (holidayRecordTwo.getHolidayNo() == cheapestID){
-                    System.out.println(holidayRecordTwo.toString());
-                }
+            // prints the Holiday object assigned to cheapestHoliday.
+            System.out.println(cheapestHoliday.toString());
+                
               
-            }  
+            
         }
 
     }// close cheapest method
+
+    public static void removeHoliday() {
+        System.out.println("bob");
+    }
 
 }//close class
