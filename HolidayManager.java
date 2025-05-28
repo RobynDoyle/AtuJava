@@ -319,14 +319,47 @@ public class HolidayManager {
     public static void udpateHolidayDetails(List<Holiday> listHoliday, Scanner keyboardIn){
         System.out.println("Enter ID of holiday to be edited");
         int holidayUpdateID = keyboardIn.nextInt();
+        keyboardIn.nextLine(); 
+        int checkHolidayFound = 0;
+        int duration;
+        double cost;
+        String destination, deptAirport;
 
-        System.out.println("Current details of the Holiday");
+        
 
-        for (int i = 0; i < listHoliday.size(); i++) {
+        for (Holiday holiday : listHoliday) {
+            if (holiday.getHolidayNo() == holidayUpdateID) {
 
+                System.out.println("Current details of the Holiday");
+                System.out.println(holiday.toString());
+                checkHolidayFound = 1;
+
+                System.out.print("Enter new details for Destination: ");
+                destination = keyboardIn.nextLine();
+                System.out.print("Enter new details for Departure Airport: ");
+                deptAirport = keyboardIn.nextLine();
+                System.out.print("Enter new details for Duration: ");
+                duration = keyboardIn.nextInt();
+
+                System.out.print("Enter new details for Cost: ");
+                cost = keyboardIn.nextDouble();
+                keyboardIn.nextLine(); 
+
+                holiday.setDestination(destination);
+                holiday.setDepartureAirport(deptAirport);
+                holiday.setDuration(duration);
+                holiday.setCost(cost);
+
+                System.out.println("Holiday record updated");
+            } 
+               
+        }
+        // checks if ID entered is relevant to data set in file. 
+        if (checkHolidayFound == 0){
+            System.out.println("Invalid holiday ID given. There is no holiday with ID " + holidayUpdateID); 
         }
 
-    }
+    } // close update holiday details method
 
     public static void updateFile(List<Holiday> listHoliday) throws IOException{
         FileWriter fw = new FileWriter("holidays.txt");
