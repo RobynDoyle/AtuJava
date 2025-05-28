@@ -35,17 +35,7 @@ public class Holiday
       cost = costIn;
    }
    
-   //Constructor 3 - For reading lines from FIle and replicating the holiday objects with ID.
-   public Holiday(int IDIn, String destinationIn, String deptAirportIn, int durationIn, double costIn)
-   {
-      holidayNo = IDIn; // this ID passing could lead to having the duplicate ID's present if the file is manipulated or set up wrong. 
-      //But it is necesary to get the correct ID associated to the holiday record. 
-      //We will assume the file is set up correctly.
-      destination = destinationIn;
-      deptAirport = deptAirportIn;
-      duration = durationIn;
-      cost = costIn;
-   }
+   
    
    
    //Mutator methods

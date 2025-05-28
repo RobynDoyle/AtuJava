@@ -1,2 +1,19 @@
-2,tuy,tre,23,43.0
-3,gf,sdf,23,43.0
+1,JFK,New York,3,1133.84
+2,BCN,Barcelona,11,1581.24
+3,DXB,Dubai,14,1201.26
+4,NRT,Tokyo,10,1358.96
+5,SYD,Sydney,4,1251.05
+6,FCO,Rome,12,1110.53
+7,CPT,Cape Town,5,483.58
+8,YYZ,Toronto,5,850.95
+9,IST,Istanbul,11,1304.86
+10,BKK,Bangkok,3,768.11
+11,LAX,Los Angeles,8,410.29
+12,BER,Berlin,13,1253.06
+13,LIS,Lisbon,14,506.13
+14,AMS,Amsterdam,6,604.67
+15,ATH,Athens,13,1717.24
+16,VIE,Vienna,4,1678.62
+17,CAI,Cairo,11,578.5
+18,GIG,Rio de Janeiro,6,1384.09
+19,RAK,Marrakech,7,10.0

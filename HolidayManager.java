@@ -53,7 +53,6 @@ public class HolidayManager {
                     break;
                 case 0: 
                     System.out.println("Goodbye!");
-                    // update the File. 
                     break;
                 default:
                     System.out.println("**************************************************************************\nINVALID INPUT! Please select 1, 2, or 0 to try again.");
@@ -164,9 +163,12 @@ public class HolidayManager {
                     break;
                 case 5:
                     System.out.println("**************************************************************************\nUpdate holiday details");
+                    udpateHolidayDetails(listHoliday, keyboardIn);
                     break;
                 case 0:
-                    System.out.println("**************************************************************************\nReturning to Start Menu");
+                    System.out.println("**************************************************************************\nReturning to Start Menu and updating file");
+                    // update the File. 
+                    updateFile(listHoliday);
                     break;
                 default:
                     System.out.println("**************************************************************************\nINVALID INPUT! Please select 1, 2, 3, 4, 5 or 0 to try again.");
@@ -193,13 +195,13 @@ public class HolidayManager {
         while (input.hasNext()){
             
             try {
-            int ID = input.nextInt();
+            int ID = input.nextInt(); // take the ID even though we dont need it. 
             String destination = input.next();
             String deptAirport = input.next();
             int duration = input.nextInt();
             double cost = input.nextDouble();
 
-            Holiday holiday = new Holiday(ID, destination, deptAirport, duration, cost);
+            Holiday holiday = new Holiday(destination, deptAirport, duration, cost);
             listHoliday.add(holiday);
             } catch  (Exception e) {
                 System.out.println("Issue in File"); // prints if there is an issue in the source data. 
@@ -232,6 +234,7 @@ public class HolidayManager {
     } // close method
 
     public static void viewHolidaysInRange(List<Holiday> listHoliday, Scanner keyboardIn) {
+        int checkIfRange = 0;
         if (listHoliday.isEmpty()) {  // check if list and therefore file is empty
             System.out.println("No holiday records on file");
         }
@@ -245,10 +248,15 @@ public class HolidayManager {
             for (Holiday holidayRecord : listHoliday) {
                 if (holidayRecord.getCost() >= lowerLimit && holidayRecord.getCost() <= upperLimit){
                     System.out.println(holidayRecord);
+                    checkIfRange = 1;
                 }
-                
-                
-            }  
+              
+            } 
+            if (checkIfRange == 0){
+                System.out.println("No Holidays in the price range.");
+
+            }
+            
         }
 
     }// close range method
@@ -288,12 +296,15 @@ public class HolidayManager {
 
         for (int i = 0; i < listHoliday.size(); i++) {
             if (listHoliday.get(i).getHolidayNo() == removeHolidayID) {
+                
+                
+                System.out.println("The following Holiday is being removed from List.");
+                System.out.println(listHoliday.get(i));
+
                 // remove the holiday when found
                 listHoliday.remove(i);
-                
-                System.out.println("The following Holiday was removed from List.");
-                System.out.println(listHoliday.get(i));
-                checkIfRemove = i; // sets the check variable to let us know something was deleted
+
+                checkIfRemove = 1; // sets the check variable to let us know something was deleted
             } 
             
             
@@ -303,12 +314,31 @@ public class HolidayManager {
             System.out.println("No holiday exists with the ID " + removeHolidayID);
         }
 
-        
-
-
-        
-
-        
     } // close remove holiday method
+
+    public static void udpateHolidayDetails(List<Holiday> listHoliday, Scanner keyboardIn){
+        System.out.println("Enter ID of holiday to be edited");
+        int holidayUpdateID = keyboardIn.nextInt();
+
+        System.out.println("Current details of the Holiday");
+
+        for (int i = 0; i < listHoliday.size(); i++) {
+
+        }
+
+    }
+
+    public static void updateFile(List<Holiday> listHoliday) throws IOException{
+        FileWriter fw = new FileWriter("holidays.txt");
+        PrintWriter pw = new PrintWriter(fw);
+
+        for (Holiday holiday : listHoliday){
+            pw.println(holiday.getHolidayNo() + "," + holiday.getDepartureAirport() + "," + holiday.getDestination() + "," + holiday.getDuration() + "," + holiday.getCost());
+
+        }
+
+        pw.close();
+    } // close updateFile method
+
 
 }//close class

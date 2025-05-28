@@ -16,7 +16,17 @@ Assessment 2 Holiday Manager program
      - The most challenging part of the assignment
      - One improvement you would make with more time
 
+
 Better error handling. 
+
+I first made a third constructor in the Holiday class to pass the ID from records in the holiday.txt file.
+I wanted to acurately take the ID's and store them in my Holiday Object Array. 
+
+However, I realised that this was not so useful and decided to revert back to the oringinal 2nd constructor.
+It could have led to having duplicate ID's in the Array List. Also the incremental counter would have been stuck at 1 
+if I would have need to create a new object via the 2nd constructor.
+
+The current solution means that we will always reset the ID index starting at 1, which is ok as long as the ID is only needed for this internal system. 
 
 ***************************************************
 
