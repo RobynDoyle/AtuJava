@@ -1,33 +1,66 @@
-Assessment 2 Holiday Manager program
-1. Student: Robyn Doyle
+# Assessment 2 Holiday Manager program
+## 1. Student: Robyn Doyle
    Student Number: L00188328 
 
 ***************************************************
 
-2. A brief summary of your program and menu options
+## 2. A brief summary of your program and menu options
+
+I chose to choose option A, Text File I/O
+
+I chose to implement a 2 menu program.
+
+The first menu prints the following options. 
+
+Welcome to the Start Menu!
+Do you wish to write new holiday data or use data already on file?
+1: Write new holiday data to file
+2: Use sample holiday data already on file
+0. Exit
+Input:
+
+I decided to use this menu at the start of the program because the Assigment information stated that we needed
+to provide a way for data to be entered into the file via the keyboard. This is possible with option 1.
+If we choose option 2, then we will simply load whatever data is already in the holidays.txt file. 
+
+
 
 ***************************************************
 
-3.  A description of how you handled file input/output
+## 3.  A description of how you handled file input/output
 
 ***************************************************
 
-4. A short personal reflection including:
+## 4. A short personal reflection including:
      - The most challenging part of the assignment
      - One improvement you would make with more time
 
+### Most Challenging part. 
 
-Better error handling. 
+I was confused on how to handle the creation of the Holiday objects regarding the HolidayNo ID. 
 
 I first made a third constructor in the Holiday class to pass the ID from records in the holiday.txt file.
-I wanted to acurately take the ID's and store them in my Holiday Object Array. 
+I wanted to acurately take the ID's and store them in my Holiday Object Array. (direct copy from the file)
 
 However, I realised that this was not so useful and decided to revert back to the oringinal 2nd constructor.
 It could have led to having duplicate ID's in the Array List. Also the incremental counter would have been stuck at 1 
-if I would have need to create a new object via the 2nd constructor.
+if I would have needed to create a new object via the 2nd constructor later on.
 
 The current solution means that we will always reset the ID index starting at 1, which is ok as long as the ID is only needed for this internal system. 
+It means however that we can not copy the ID and that the ID will always be reset. 
 
+*** *** *** ***
+
+### Improvement that I would make.
+
+Adding a function to add more holidays to the file, instead of just deleting all the file and then adding new ones. 
+This would require smart handling of the holiday number ID. 
+
+I would get the ID to be taken from the file as it is and keep it paired tightly to the Holiday record.
+This would make the code more complicated since we would need to change the constructor in the Holiday class (add a 3rd constructor.)
+We would need to handle the automatically incrementing counter to undestand which ID's are already present in the holiday.text file. 
+
+Better error handling would also be beneficial to the overall program. 
 ***************************************************
 
 5. Reflection Prompt - Save on Exit vs Autosave
@@ -36,9 +69,9 @@ NOTE: Your program is currently expected to save all changes only when the user 
     If you were to change the program to save immediately after each add, update, or remove operation (autosave), what would be the main advantages and disadvantages of this approach?
 
 Answer:
-
-
-Advantages. If the program crashes, we would have some of our work saved.
+Advantages. 
+    1. If the program crashes, we would have some of our work saved.
+    2. If the user forgets to exit the program fully, then the data will also be at least partially saved. 
 
 Disadvantages: 
     1. If we use autosave we would write to the file many times. This costs more resources.
@@ -46,3 +79,11 @@ Disadvantages:
 ***************************************************
 
 6. Confirmation of the elements in the menu structure that you managed to complete (e.g.   - View all holidays,  - Filter by price range  - Show cheapest holiday,  - Remove holiday,  - Update holiday ) Please clearly indicate this in your README file
+
+I successfully completed ALL of the features and they worked without issues. 
+
+View all holidays - COMPLETED
+Filter by price range - COMPLETED
+Show cheapest holiday - COMPLETED
+Remove holiday - COMPLETED
+Update holiday - COMPLETED

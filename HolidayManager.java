@@ -29,7 +29,7 @@ public class HolidayManager {
             System.out.println("**************************************************************************\nWelcome to the Start Menu!\nDo you wish to write new holiday data or use data already on file?");
             System.out.println("1: Write new holiday data to file");
             System.out.println("2: Use sample holiday data already on file");
-            System.out.println("0. Exit (and Save)");
+            System.out.println("0. Exit");
             System.out.print("Input:");
             
             
@@ -129,7 +129,7 @@ public class HolidayManager {
             System.out.println("3. Display details of the cheapest holiday");
             System.out.println("4. Remove a holiday");
             System.out.println("5. Update holiday details");
-            System.out.println("0. Exit to Start Menu");
+            System.out.println("0. Exit to Start Menu (and Save)");
             System.out.print("Input:");
             
             
@@ -239,9 +239,9 @@ public class HolidayManager {
             System.out.println("No holiday records on file");
         }
         else { // asks user for input to set price range.
-            System.out.println("Enter price range lower limit: ");
+            System.out.print("Enter price range lower limit: ");
             double lowerLimit = keyboardIn.nextDouble();
-            System.out.println("Enter price range upper limit: ");
+            System.out.print("Enter price range upper limit: ");
             double upperLimit = keyboardIn.nextDouble();
 
             // if price is in range then print to screen the holiday objects from the list.
