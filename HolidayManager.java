@@ -18,12 +18,8 @@ public class HolidayManager {
     }// close main method
 
     public static void startMenu(Scanner keyboardIn) throws IOException
-    { 
-        
+    {     
         int choiceMenu1 = 10; // initialise var
-
-        
-        
 
         do {
             System.out.println("**************************************************************************\nWelcome to the Start Menu!\nDo you wish to write new holiday data or use data already on file?");
@@ -39,7 +35,6 @@ public class HolidayManager {
                 keyboardIn.nextLine(); // clears the bad input that we dont want, like flushing
                 continue; 
             }
-
 
             switch (choiceMenu1) {
                 case 1: // here we enter new data into the holidays.txt file
@@ -57,8 +52,6 @@ public class HolidayManager {
                 default:
                     System.out.println("**************************************************************************\nINVALID INPUT! Please select 1, 2, or 0 to try again.");
             }
-
-
         } while (choiceMenu1 != 0 ); // dont close the menu until 0 is selected
     } // close start menu method
 
@@ -68,8 +61,7 @@ public class HolidayManager {
          int durationIn; 
          double costIn;
          char ans;
- 
-         
+        
          FileWriter holidayFile = new FileWriter("holidays.txt"); //create a file writer object called fw
          PrintWriter pw = new PrintWriter(holidayFile); // create a PrintWriter object pw that has file writer object passed to it. 
  
@@ -79,7 +71,6 @@ public class HolidayManager {
              destinationIn = keyboardIn.next();
              System.out.println("Enter Departure Airport:");
              deptAirportIn = keyboardIn.next();
-
 
              System.out.println("Enter Total Cost of Holiday:");
              // check to ensure program does not crash if wrong data type is entered
@@ -108,9 +99,7 @@ public class HolidayManager {
  
        } while(ans == 'y' || ans == 'Y');  //continue entering holidays if = to y
          
-         
- 
-         pw.close(); // close the File Writer.
+         pw.close(); // close the PrintWriter.
          
          System.out.println("File created and saved");
     } // close addHoliday method
@@ -119,9 +108,7 @@ public class HolidayManager {
         int choiceMenu2 = 10; //initialise choice var
         List<Holiday> listHoliday =  loadHolidayRecords(); // Load the data from the file as a List of Holiday Objects
 
-        // menu print
-        
-        
+        // menu print       
         do { 
             System.out.println("**************************************************************************\nHoliday Menu");
             System.out.println("1. View all holidays");
@@ -132,7 +119,6 @@ public class HolidayManager {
             System.out.println("0. Exit to Start Menu (and Save)");
             System.out.print("Input:");
             
-            
             try{
                 choiceMenu2 = keyboardIn.nextInt(); // takes user input
             } catch (InputMismatchException ex) {
@@ -141,8 +127,6 @@ public class HolidayManager {
                 continue; 
             }
 
-           
-            
             // user choice gets assigned to method to be executed.
             switch (choiceMenu2) {
                 case 1:
@@ -163,7 +147,7 @@ public class HolidayManager {
                     break;
                 case 5:
                     System.out.println("**************************************************************************\nUpdate holiday details");
-                    udpateHolidayDetails(listHoliday, keyboardIn);
+                    updateHolidayDetails(listHoliday, keyboardIn);
                     break;
                 case 0:
                     System.out.println("**************************************************************************\nReturning to Start Menu and updating file");
@@ -177,7 +161,6 @@ public class HolidayManager {
            
         
     } // close holidayMenu method
-
 
     // a method that loads the data from the File once, so we dont need to keep opening the file. it returns a List object.
     public static List<Holiday> loadHolidayRecords() throws IOException {
@@ -208,7 +191,6 @@ public class HolidayManager {
             }
         }
     
-
           // check if the Array List has less then 0 entries. if true then the file is empty. 
           if (listHoliday.isEmpty()){
             System.out.println("File is empty, try adding some data first via the Start Menu");
@@ -229,8 +211,7 @@ public class HolidayManager {
             for (Holiday holidayRecord : listHoliday) {
                 System.out.println(holidayRecord);
             }  
-        }
-        
+        }       
     } // close method
 
     public static void viewHolidaysInRange(List<Holiday> listHoliday, Scanner keyboardIn) {
@@ -254,11 +235,8 @@ public class HolidayManager {
             } 
             if (checkIfRange == 0){
                 System.out.println("No Holidays in the price range.");
-
-            }
-            
+            }            
         }
-
     }// close range method
 
 
@@ -280,12 +258,8 @@ public class HolidayManager {
             System.out.println("This is the cheapest holiday on File");
 
             // prints the Holiday object assigned to cheapestHoliday.
-            System.out.println(cheapestHoliday.toString());
-                
-              
-            
+            System.out.println(cheapestHoliday.toString());            
         }
-
     }// close cheapest method
 
     public static void removeHoliday(List<Holiday> listHoliday, Scanner keyboardIn) {
@@ -296,8 +270,7 @@ public class HolidayManager {
 
         for (int i = 0; i < listHoliday.size(); i++) {
             if (listHoliday.get(i).getHolidayNo() == removeHolidayID) {
-                
-                
+                               
                 System.out.println("The following Holiday is being removed from List.");
                 System.out.println(listHoliday.get(i));
 
@@ -306,8 +279,6 @@ public class HolidayManager {
 
                 checkIfRemove = 1; // sets the check variable to let us know something was deleted
             } 
-            
-            
         }
         // prints to screen in the event that no holiday could be found. 
         if (checkIfRemove == 0){
@@ -316,7 +287,7 @@ public class HolidayManager {
 
     } // close remove holiday method
 
-    public static void udpateHolidayDetails(List<Holiday> listHoliday, Scanner keyboardIn){
+    public static void updateHolidayDetails(List<Holiday> listHoliday, Scanner keyboardIn){
         System.out.println("Enter ID of holiday to be edited");
         int holidayUpdateID = keyboardIn.nextInt();
         keyboardIn.nextLine(); 
@@ -324,8 +295,6 @@ public class HolidayManager {
         int duration;
         double cost;
         String destination, deptAirport;
-
-        
 
         for (Holiday holiday : listHoliday) {
             if (holiday.getHolidayNo() == holidayUpdateID) {
@@ -351,27 +320,22 @@ public class HolidayManager {
                 holiday.setCost(cost);
 
                 System.out.println("Holiday record updated");
-            } 
-               
+            }              
         }
         // checks if ID entered is relevant to data set in file. 
         if (checkHolidayFound == 0){
             System.out.println("Invalid holiday ID given. There is no holiday with ID " + holidayUpdateID); 
         }
-
     } // close update holiday details method
 
     public static void updateFile(List<Holiday> listHoliday) throws IOException{
         FileWriter fw = new FileWriter("holidays.txt");
         PrintWriter pw = new PrintWriter(fw);
 
-        for (Holiday holiday : listHoliday){
-            pw.println(holiday.getHolidayNo() + "," + holiday.getDepartureAirport() + "," + holiday.getDestination() + "," + holiday.getDuration() + "," + holiday.getCost());
-
+        for (Holiday holiday : listHoliday){ // for holiday in listHoliday write the detials to file.
+            pw.println(holiday.getHolidayNo() + "," + holiday.getDestination() + "," + holiday.getDepartureAirport() + "," + holiday.getDuration() + "," + holiday.getCost());
         }
-
-        pw.close();
+        pw.close(); // close the PrintWriter for safe writing to file.
     } // close updateFile method
-
-
+    
 }//close class

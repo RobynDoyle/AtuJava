@@ -8,9 +8,9 @@
 
 I chose to choose option A, Text File I/O
 
-I chose to implement a 2 menu program.
 
-The first menu prints the following options. 
+I chose to implement a 2 menu program. A "Start Menu" and a "Holiday Menu"
+The "Start Menu" prints the following options. 
 
 Welcome to the Start Menu!
 Do you wish to write new holiday data or use data already on file?
@@ -19,21 +19,65 @@ Do you wish to write new holiday data or use data already on file?
 0. Exit
 Input:
 
-I decided to use this menu at the start of the program because the Assigment information stated that we needed
+I decided to use this menu at the start of the program because the Assigment Information stated that we needed
 to provide a way for data to be entered into the file via the keyboard. This is possible with option 1.
 If we choose option 2, then we will simply load whatever data is already in the holidays.txt file. 
 
+Then we will be brought to the "Holiday Menu". That prints to screen the following options. 
 
+Holiday Menu
+1. View all holidays
+2. View holiday(s) within a given price range
+3. Display details of the cheapest holiday
+4. Remove a holiday
+5. Update holiday details
+0. Exit to Start Menu (and Save)
+Input:
 
+Here we can choose to perform the options listed.
+1. Prints each Holiday object in the List to the screen.
+2. Asks user for upper and lower limits and then prints to screen Holidays objects that match the range.
+3. Loops through all holiday objects in the list and prints the cheapest one. 
+4. Asks the user to specify the ID of the Holiday record they wish to update. Then asks for the new data. 
+Also loops through the Holiday Objects List to ensure that the ID inputted is valid. Then updates the Holiday object.
+5. Asks the user to specify the ID of the Holiday record they wish to remove.
+Also loops through the Holiday Objects List to ensure that the ID inputted is valid. Removes the holiday object from List.
+0. Writes the Holiday Object List to the File use PrintWriter and FileWriter. Returns to Start Menu. 
 ***************************************************
 
 ## 3.  A description of how you handled file input/output
 
+### Reading the File.
+I created a List to store Holiday Objects.
+        List<Holiday> listHoliday = new ArrayList<>(); // create the Array List object to hold the data.
+
+I setup Filewriter for the holidays.txt file. 
+        File readHolidayFile = new File("holidays.txt"); // we read the holiday file
+
+I then looped though the rows in the file and created new Holiday objects using the constructor.
+
+### Writing to File. 
+I set up the FileWriter
+        FileWriter fw = new FileWriter("holidays.txt");
+
+I set up the PrintWriter.
+        PrintWriter pw = new PrintWriter(fw);
+
+Then I loop through the records in the Holiday Objects List and write them to the file.
+        for (Holiday holiday : listHoliday){ // for holiday in listHoliday write the detials to file.
+                    pw.println(holiday.getHolidayNo() + "," + holiday.getDepartureAirport() + "," + holiday.getDestination() + "," + holiday.getDuration() + "," + holiday.getCost());
+
+                }
+
+I close the pw.
+        pw.close(); // close the PrintWriter for safe writing to file.
 ***************************************************
 
 ## 4. A short personal reflection including:
      - The most challenging part of the assignment
      - One improvement you would make with more time
+
+I really enjoyed this assignment as it was fun to do and challenged me to figure our interesting problems such as the passing of the Object List.
 
 ### Most Challenging part. 
 
@@ -42,7 +86,7 @@ I was confused on how to handle the creation of the Holiday objects regarding th
 I first made a third constructor in the Holiday class to pass the ID from records in the holiday.txt file.
 I wanted to acurately take the ID's and store them in my Holiday Object Array. (direct copy from the file)
 
-However, I realised that this was not so useful and decided to revert back to the oringinal 2nd constructor.
+However, I realised that this was not so useful and decided to revert back to the original second constructor.
 It could have led to having duplicate ID's in the Array List. Also the incremental counter would have been stuck at 1 
 if I would have needed to create a new object via the 2nd constructor later on.
 
@@ -58,7 +102,7 @@ This would require smart handling of the holiday number ID.
 
 I would get the ID to be taken from the file as it is and keep it paired tightly to the Holiday record.
 This would make the code more complicated since we would need to change the constructor in the Holiday class (add a 3rd constructor.)
-We would need to handle the automatically incrementing counter to undestand which ID's are already present in the holiday.text file. 
+We would need to handle the automatically incrementing counter to understand which ID's are already present in the holidays.text file. 
 
 Better error handling would also be beneficial to the overall program. 
 ***************************************************
@@ -82,8 +126,10 @@ Disadvantages:
 
 I successfully completed ALL of the features and they worked without issues. 
 
+Add holidays to holidays.txt via keyboard input - COMPLETED
 View all holidays - COMPLETED
 Filter by price range - COMPLETED
 Show cheapest holiday - COMPLETED
 Remove holiday - COMPLETED
 Update holiday - COMPLETED
+Exit and Save - COMPLETED
